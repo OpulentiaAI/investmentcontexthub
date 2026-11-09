@@ -1,3 +1,14 @@
+---
+type: wks.brief
+tldr: Start here for the Watts Knowledge System
+status: active
+owner: Derrick Watts
+updated: 2026-11-09
+surface: watts
+provenance: WattsKnowledgeSystem scaffold
+kind: workspace
+---
+
 # Start here
 
 This is Derrick Watts's persistent knowledge system. It is built to ingest his systems, preserve provenance, and support investment research, forecasting, portfolio review, and critical analysis.

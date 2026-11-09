@@ -1,13 +1,112 @@
-layout: watts-knowledge-system-v1
-surfaces:
-  watts: entities connectors captures concepts claims maps signals playbooks runbooks automations research skills inject catalogs
-  operator: ops evidence runs private intake receipts
-sources:
-  raw: sources/ # never committed
-  captures: captures/ # typed, hashed, private-safe derivatives
-  graph: entities/ concepts/ claims/ maps/
-knowledge:
-  spine: captures -> claims -> concepts -> maps -> entities
-  provenance: every claim carries evidence_kind and grounded_in
-investing:
-  spine: portfolio-mandate -> investment-signal -> investment-decision -> forecast -> scorecard
+type: composition::au-host-sdk
+intent-routing:
+  wires:
+    - intent: "[[open-intent::intent]]"
+      mode: fallback
+      source: "[[^^tree]]"
+      targets:
+        - "[[^^document-tabs]]"
+  defaults:
+    - intent: "[[open-intent::intent]]"
+      roles: ["[[tabs::tabs]]"]
+      mode: priority
+slot-defaults:
+  placeholder: "[[placeholder-picker::placeholder-picker]]"
+viewer-defaults:
+  defaults:
+    - opens: md
+      viewer: "[[aup-reader::aup-reader]]"
+    - opens: markdown
+      viewer: "[[aup-reader::aup-reader]]"
+    - opens: yaml
+      viewer: "[[editor-pane::editor]]"
+    - opens: yml
+      viewer: "[[editor-pane::editor]]"
+    - opens: json
+      viewer: "[[editor-pane::editor]]"
+    - opens: jsonl
+      viewer: "[[editor-pane::editor]]"
+    - opens: png
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: jpg
+      viewer: "[[image-viewer::media-viewers]]"
+windows:
+  - "[[^^au-window-primary]]"
+projections:
+  - ^: au-window-primary
+    content: "[[^^workspace]]"
+    primary: true
+    type: window::au-host-sdk
+  - ^: workspace
+    center:
+      child: "[[^^documents]]"
+      type: sandwich-slot::sandwich
+    left:
+      child: "[[^^sidebar]]"
+      hideHeader: true
+      label: Files
+      size: 288
+      type: sandwich-slot::sandwich
+      minSize: 200
+    type: sandwich::sandwich
+  - ^: sidebar
+    body: "[[^^sidebar-stack]]"
+    type: aup-workspace-sidebar::aup-workspace-sidebar
+  - ^: sidebar-stack
+    addButton: always
+    items:
+      - child: "[[^^tree]]"
+        size: 60
+        type: column-slot::column
+      - child: "[[^^graph]]"
+        size: 40
+        type: column-slot::column
+    itemHeaders: always
+    type: column::column
+  - ^: graph
+    nodeScale: 1.2
+    selectionZoom: 0.9
+    type: force-graph::force-graph
+  - ^: tree
+    type: file-tree::file-tree
+  - ^: documents
+    root: "[[^^document-tabs]]"
+    type: bento::bento
+  - ^: document-tabs
+    activeTab: reader
+    defaultOpenMode: permanent
+    newTabPosition: after-source
+    tabs:
+      - "[[^^reader]]"
+      - "[[^^workspace-now]]"
+      - "[[^^source-manifest]]"
+      - "[[^^connection-inventory]]"
+      - "[[^^portfolio-research]]"
+      - "[[^^forecast-scorecard]]"
+      - "[[^^automation-dictionary]]"
+      - "[[^^hedge-fund-patterns]]"
+    type: tabs::tabs
+  - ^: reader
+    file: start here.md
+    type: aup-reader::aup-reader
+  - ^: workspace-now
+    file: entities/workspace-now.md
+    type: aup-reader::aup-reader
+  - ^: source-manifest
+    file: entities/source-manifest.md
+    type: aup-reader::aup-reader
+  - ^: connection-inventory
+    file: entities/connection-inventory.md
+    type: aup-reader::aup-reader
+  - ^: portfolio-research
+    file: runbooks/portfolio-research.md
+    type: aup-reader::aup-reader
+  - ^: forecast-scorecard
+    file: runbooks/forecast-and-scorecard.md
+    type: aup-reader::aup-reader
+  - ^: automation-dictionary
+    file: catalogs/automation-dictionary.md
+    type: aup-reader::aup-reader
+  - ^: hedge-fund-patterns
+    file: research/ai-hedge-fund-patterns.md
+    type: aup-reader::aup-reader
