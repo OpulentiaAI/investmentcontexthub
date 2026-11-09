@@ -18,10 +18,10 @@ Every specialist module in the motion. Run them in the order on routing. Do not 
 
 | name | module | role | nextOwner |
 |---|---|---|---|
-| [[autonomous-au-host-demo]] | au-host demo | autonomous-demo-driver | operator |
 | [[best-practices-playbook]] | best practices | knowledge-weaver | context-curator |
 | [[critical-analysis-playbook]] | critical investor modeling | critical-analyst | decision-reviewer |
 | [[crm-sync-playbook]] | crm sync | crm-steward | knowledge-weaver |
+| [[financial-analysis-presentation]] | investment research | financial-analyst | operator |
 | [[forecast-review-playbook]] | forecast review | forecast-reviewer | portfolio-keeper |
 | [[ingestion-playbook]] | ingestion | source-steward | knowledge-weaver |
 | [[portfolio-research-playbook]] | portfolio research | portfolio-researcher | risk-reviewer |

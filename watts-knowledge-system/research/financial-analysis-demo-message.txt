@@ -1,0 +1,10 @@
+Watts financial analysis demo: PASS
+Artifacts: research/financial-analysis-demo.html, research/financial-analysis-demo-message.txt
+Data: research/financial-demo-data.json
+Portfolio: Watts Demo Paper Fund NAV $1,250,000, total return 12.4% vs benchmark 9.8%
+Decisions: no-trade=1, paper=1, watch=2
+Proof: JSON validated, HTML rendered, totals recomputed by scripts/render_financial_deck.py
+Blockers: none
+Safety: mock/research-only; no live trading, sends, contact, payments, publishing, or automation enablement.
+
+Mock portfolio is modestly ahead of benchmark with controlled drawdown; continue paper-only research and keep Beacon Energy Storage on no-trade until evidence improves.

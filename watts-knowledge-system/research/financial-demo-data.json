@@ -1,0 +1,166 @@
+{
+  "title": "Watts Financial Analysis Demo",
+  "subtitle": "Synthetic mock portfolio for investor demo — research only, not investment advice",
+  "disclaimer": "MOCK DATA. This deck is a demonstration artifact for the Watts Knowledge System. It is not investment advice, not a recommendation, and not authority to trade.",
+  "portfolio": {
+    "name": "Watts Demo Paper Fund",
+    "navUsd": 1250000,
+    "inceptionNavUsd": 1000000,
+    "totalReturnPct": 12.4,
+    "benchmarkReturnPct": 9.8,
+    "ytdReturnPct": 7.1,
+    "volatilityPct": 11.8,
+    "sharpe": 0.91,
+    "maxDrawdownPct": -8.4,
+    "cashPct": 8.0
+  },
+  "positions": [
+    {
+      "name": "Northstar Robotics",
+      "ticker": "NRTH",
+      "weightPct": 20.0,
+      "returnPct": 24.5,
+      "sector": "Robotics",
+      "conviction": 0.78,
+      "thesis": "Mock thesis: automation capex remains durable; evidence is synthetic demo data only."
+    },
+    {
+      "name": "Helio Materials",
+      "ticker": "HELI",
+      "weightPct": 18.0,
+      "returnPct": 11.2,
+      "sector": "Materials",
+      "conviction": 0.64,
+      "thesis": "Mock thesis: materials margin expansion needs confirmation from next filing."
+    },
+    {
+      "name": "Beacon Energy Storage",
+      "ticker": "BCEN",
+      "weightPct": 16.0,
+      "returnPct": -3.8,
+      "sector": "Energy",
+      "conviction": 0.52,
+      "thesis": "Mock thesis: storage demand is real but project timing is uncertain."
+    },
+    {
+      "name": "Atlas Bio Systems",
+      "ticker": "ATLS",
+      "weightPct": 14.0,
+      "returnPct": 31.0,
+      "sector": "Bio",
+      "conviction": 0.69,
+      "thesis": "Mock thesis: platform optionality is interesting; clinical/regulatory risk is high."
+    },
+    {
+      "name": "Meridian Fintech",
+      "ticker": "MRDN",
+      "weightPct": 12.0,
+      "returnPct": 6.4,
+      "sector": "Fintech",
+      "conviction": 0.58,
+      "thesis": "Mock thesis: payments volume growth is steady but competitive pressure persists."
+    },
+    {
+      "name": "Circuit Health AI",
+      "ticker": "CRCT",
+      "weightPct": 12.0,
+      "returnPct": 18.7,
+      "sector": "Bio",
+      "conviction": 0.72,
+      "thesis": "Mock thesis: diagnostic workflow automation could compound if retention holds."
+    }
+  ],
+  "exposure": {
+    "sectors": [
+      { "name": "Robotics", "weightPct": 20.0 },
+      { "name": "Materials", "weightPct": 18.0 },
+      { "name": "Energy", "weightPct": 16.0 },
+      { "name": "Bio", "weightPct": 26.0 },
+      { "name": "Fintech", "weightPct": 12.0 },
+      { "name": "Cash", "weightPct": 8.0 }
+    ],
+    "topPositionPct": 20.0,
+    "concentrationFlag": "medium"
+  },
+  "signals": [
+    {
+      "asset": "Northstar Robotics",
+      "analyst": "fundamentals",
+      "conviction": 0.78,
+      "horizonDays": 180,
+      "thesis": "Mock analyst view: durable automation demand and improving unit economics.",
+      "evidence": "synthetic demo capture; no external source"
+    },
+    {
+      "asset": "Helio Materials",
+      "analyst": "value",
+      "conviction": 0.64,
+      "horizonDays": 270,
+      "thesis": "Mock analyst view: margin expansion possible if input costs stabilize.",
+      "evidence": "synthetic demo capture; no external source"
+    },
+    {
+      "asset": "Atlas Bio Systems",
+      "analyst": "quality",
+      "conviction": 0.69,
+      "horizonDays": 365,
+      "thesis": "Mock analyst view: platform optionality offset by regulatory risk.",
+      "evidence": "synthetic demo capture; no external source"
+    },
+    {
+      "asset": "Beacon Energy Storage",
+      "analyst": "risk",
+      "conviction": 0.52,
+      "horizonDays": 90,
+      "thesis": "Mock analyst view: project timing risk caps conviction despite sector tailwind.",
+      "evidence": "synthetic demo capture; no external source"
+    }
+  ],
+  "forecasts": [
+    {
+      "subject": "Watts Demo Paper Fund NAV",
+      "horizon": "90 days",
+      "method": "deterministic paper tick with risk clamps",
+      "output": "base +2.1%, stress -1.4%, no-trade if drawdown clamp breached",
+      "confidence": "medium"
+    },
+    {
+      "subject": "Northstar Robotics position",
+      "horizon": "180 days",
+      "method": "conviction-weighted scenario envelope",
+      "output": "base +18%, bear -6%, sized below single-name cap",
+      "confidence": "medium"
+    }
+  ],
+  "decisions": [
+    {
+      "asset": "Northstar Robotics",
+      "decision": "paper",
+      "rationale": "Highest conviction mock signal; size within paper mandate and single-name cap.",
+      "costCeilingUsd": 50000,
+      "signalRefs": ["demo-northstar-fundamentals"]
+    },
+    {
+      "asset": "Helio Materials",
+      "decision": "watch",
+      "rationale": "Margin thesis needs confirmation before paper sizing increases.",
+      "costCeilingUsd": 25000,
+      "signalRefs": ["demo-helio-value"]
+    },
+    {
+      "asset": "Atlas Bio Systems",
+      "decision": "watch",
+      "rationale": "High optionality but regulatory risk requires cleaner evidence.",
+      "costCeilingUsd": 25000,
+      "signalRefs": ["demo-atlas-quality"]
+    },
+    {
+      "asset": "Beacon Energy Storage",
+      "decision": "no-trade",
+      "rationale": "Project timing uncertainty and weak mock momentum fail risk clamp.",
+      "costCeilingUsd": 0,
+      "signalRefs": ["demo-beacon-risk"]
+    }
+  ],
+  "message": "Mock portfolio is modestly ahead of benchmark with controlled drawdown; continue paper-only research and keep Beacon Energy Storage on no-trade until evidence improves."
+}

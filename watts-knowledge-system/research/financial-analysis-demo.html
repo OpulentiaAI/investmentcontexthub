@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watts Financial Analysis Demo</title>
+<style>
+  :root { color-scheme: light; --ink:#17202a; --muted:#5d6b7a; --line:#d8e0e8; --accent:#0f6b5c; --warn:#9a5b00; --bad:#9b2226; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:#f5f7f9; }
+  .slide { min-height: 100vh; padding: 64px 8vw; border-bottom: 1px solid var(--line); background: white; }
+  h1, h2, h3 { margin: 0 0 18px; letter-spacing: 0; }
+  h1 { font-size: clamp(34px, 5vw, 68px); line-height: 1; }
+  h2 { font-size: clamp(26px, 3vw, 42px); }
+  h3 { font-size: 18px; margin-top: 24px; }
+  p, li, td, th { font-size: 15px; line-height: 1.45; }
+  .subtitle { color: var(--muted); font-size: 20px; margin-top: 12px; }
+  .metrics { display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin: 28px 0; }
+  .metric { border:1px solid var(--line); border-radius: 14px; padding: 16px; background:#fbfcfd; }
+  .metric span { display:block; color:var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+  .metric strong { display:block; font-size: 28px; margin-top: 8px; }
+  .metric em { display:block; color:var(--muted); font-style: normal; margin-top: 6px; }
+  table { width:100%; border-collapse: collapse; margin: 14px 0 22px; }
+  th, td { border-bottom:1px solid var(--line); padding: 10px 8px; text-align:left; vertical-align: top; }
+  th { color:var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+  .two-col { display:grid; grid-template-columns: minmax(260px, .9fr) minmax(420px, 1.4fr); gap: 32px; }
+  .bar-row { display:grid; grid-template-columns: 110px 1fr 58px; gap: 10px; align-items:center; margin: 10px 0; }
+  .bar { height: 12px; background:#eef2f5; border-radius: 999px; overflow:hidden; }
+  .bar div { height:100%; background: var(--accent); }
+  .pill { display:inline-block; border-radius:999px; padding:4px 10px; font-size:12px; font-weight:700; }
+  .pill.paper { background:#e7f4ef; color:#0f6b5c; }
+  .pill.watch { background:#fff4d6; color:var(--warn); }
+  .pill.no-trade, .pill.reject { background:#fde8e8; color:var(--bad); }
+  .pill.escalate { background:#e8efff; color:#274b9f; }
+  .note, .disclaimer { color:var(--muted); }
+  .disclaimer { border-top:1px solid var(--line); padding-top:16px; margin-top:24px; }
+  ul { padding-left: 20px; }
+  @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } .slide { padding: 42px 6vw; } }
+  @media print { .slide { min-height:auto; page-break-after: always; } }
+</style>
+</head>
+<body>
+<section class="slide">
+  <h1>Watts Financial Analysis Demo</h1>
+  <p class="subtitle">Synthetic mock portfolio for investor demo — research only, not investment advice</p>
+  <p class="disclaimer">MOCK DATA. This deck is a demonstration artifact for the Watts Knowledge System. It is not investment advice, not a recommendation, and not authority to trade.</p>
+</section>
+
+<section class="slide">
+  <h2>1. Portfolio efficiency</h2>
+  
+<div class="metrics">
+  <div class="metric"><span>NAV</span><strong>$1,250,000</strong></div>
+  <div class="metric"><span>Total return</span><strong>12.4%</strong><em>vs benchmark 9.8%</em></div>
+  <div class="metric"><span>YTD return</span><strong>7.1%</strong></div>
+  <div class="metric"><span>Volatility</span><strong>11.8%</strong></div>
+  <div class="metric"><span>Sharpe</span><strong>0.91</strong></div>
+  <div class="metric"><span>Max drawdown</span><strong>-8.4%</strong></div>
+  <div class="metric"><span>Cash</span><strong>8.0%</strong></div>
+</div>
+<p class="note">Watts Demo Paper Fund — synthetic mock portfolio for demo only.</p>
+
+</section>
+
+<section class="slide">
+  <h2>2. Exposure and concentration</h2>
+  
+<div class="two-col">
+  <div>
+    <h3>Sector exposure</h3>
+    <div class='bar-row'><span>Robotics</span><div class='bar'><div style='width:20.0%'></div></div><strong>20.0%</strong></div><div class='bar-row'><span>Materials</span><div class='bar'><div style='width:18.0%'></div></div><strong>18.0%</strong></div><div class='bar-row'><span>Energy</span><div class='bar'><div style='width:16.0%'></div></div><strong>16.0%</strong></div><div class='bar-row'><span>Bio</span><div class='bar'><div style='width:26.0%'></div></div><strong>26.0%</strong></div><div class='bar-row'><span>Fintech</span><div class='bar'><div style='width:12.0%'></div></div><strong>12.0%</strong></div><div class='bar-row'><span>Cash</span><div class='bar'><div style='width:8.0%'></div></div><strong>8.0%</strong></div>
+  </div>
+  <div>
+    <h3>Top positions</h3>
+    <table><thead><tr><th>Name</th><th>Ticker</th><th>Sector</th><th>Weight</th><th>Return</th><th>Conviction</th></tr></thead><tbody><tr><td>Northstar Robotics</td><td>NRTH</td><td>Robotics</td><td>20.0%</td><td>24.5%</td><td>0.78</td></tr><tr><td>Helio Materials</td><td>HELI</td><td>Materials</td><td>18.0%</td><td>11.2%</td><td>0.64</td></tr><tr><td>Beacon Energy Storage</td><td>BCEN</td><td>Energy</td><td>16.0%</td><td>-3.8%</td><td>0.52</td></tr><tr><td>Atlas Bio Systems</td><td>ATLS</td><td>Bio</td><td>14.0%</td><td>31.0%</td><td>0.69</td></tr><tr><td>Meridian Fintech</td><td>MRDN</td><td>Fintech</td><td>12.0%</td><td>6.4%</td><td>0.58</td></tr><tr><td>Circuit Health AI</td><td>CRCT</td><td>Bio</td><td>12.0%</td><td>18.7%</td><td>0.72</td></tr></tbody></table>
+    <h3>Thesis excerpts</h3>
+    <ul><li><strong>Northstar Robotics</strong> — Mock thesis: automation capex remains durable; evidence is synthetic demo data only.</li><li><strong>Helio Materials</strong> — Mock thesis: materials margin expansion needs confirmation from next filing.</li><li><strong>Beacon Energy Storage</strong> — Mock thesis: storage demand is real but project timing is uncertain.</li><li><strong>Atlas Bio Systems</strong> — Mock thesis: platform optionality is interesting; clinical/regulatory risk is high.</li></ul>
+  </div>
+</div>
+<p class="note">Concentration flag: medium; top position 20.0%.</p>
+
+</section>
+
+<section class="slide">
+  <h2>3. Signals and forecasts</h2>
+  
+<h3>Investment signals</h3>
+<table><thead><tr><th>Asset</th><th>Analyst</th><th>Conviction</th><th>Horizon</th><th>Thesis</th><th>Evidence</th></tr></thead><tbody><tr><td>Northstar Robotics</td><td>fundamentals</td><td>0.78</td><td>180</td><td>Mock analyst view: durable automation demand and improving unit economics.</td><td>synthetic demo capture; no external source</td></tr><tr><td>Helio Materials</td><td>value</td><td>0.64</td><td>270</td><td>Mock analyst view: margin expansion possible if input costs stabilize.</td><td>synthetic demo capture; no external source</td></tr><tr><td>Atlas Bio Systems</td><td>quality</td><td>0.69</td><td>365</td><td>Mock analyst view: platform optionality offset by regulatory risk.</td><td>synthetic demo capture; no external source</td></tr><tr><td>Beacon Energy Storage</td><td>risk</td><td>0.52</td><td>90</td><td>Mock analyst view: project timing risk caps conviction despite sector tailwind.</td><td>synthetic demo capture; no external source</td></tr></tbody></table>
+<h3>Forecasts / scorecard</h3>
+<table><thead><tr><th>Subject</th><th>Horizon</th><th>Method</th><th>Output</th><th>Confidence</th></tr></thead><tbody><tr><td>Watts Demo Paper Fund NAV</td><td>90 days</td><td>deterministic paper tick with risk clamps</td><td>base +2.1%, stress -1.4%, no-trade if drawdown clamp breached</td><td>medium</td></tr><tr><td>Northstar Robotics position</td><td>180 days</td><td>conviction-weighted scenario envelope</td><td>base +18%, bear -6%, sized below single-name cap</td><td>medium</td></tr></tbody></table>
+
+</section>
+
+<section class="slide">
+  <h2>4. Decisions and next actions</h2>
+  
+<table><thead><tr><th>Asset</th><th>Decision</th><th>Rationale</th><th>Cost ceiling</th><th>Signal refs</th></tr></thead><tbody><tr><td>Northstar Robotics</td><td><span class='pill paper'>paper</span></td><td>Highest conviction mock signal; size within paper mandate and single-name cap.</td><td>$50,000</td><td>demo-northstar-fundamentals</td></tr><tr><td>Helio Materials</td><td><span class='pill watch'>watch</span></td><td>Margin thesis needs confirmation before paper sizing increases.</td><td>$25,000</td><td>demo-helio-value</td></tr><tr><td>Atlas Bio Systems</td><td><span class='pill watch'>watch</span></td><td>High optionality but regulatory risk requires cleaner evidence.</td><td>$25,000</td><td>demo-atlas-quality</td></tr><tr><td>Beacon Energy Storage</td><td><span class='pill no-trade'>no-trade</span></td><td>Project timing uncertainty and weak mock momentum fail risk clamp.</td><td>$0</td><td>demo-beacon-risk</td></tr></tbody></table>
+<p class="note">Mock portfolio is modestly ahead of benchmark with controlled drawdown; continue paper-only research and keep Beacon Energy Storage on no-trade until evidence improves.</p>
+<p class="disclaimer">MOCK DATA. This deck is a demonstration artifact for the Watts Knowledge System. It is not investment advice, not a recommendation, and not authority to trade.</p>
+
+</section>
+
+</body>
+</html>
