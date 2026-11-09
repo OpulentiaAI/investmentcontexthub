@@ -1,0 +1,5 @@
+#: A competency question deliberately set aside without an answer.
+#: It may be outside scope, a duplicate or retired for another reason.
+#: Keep the terminal record so derive can recognize requirements already set aside.
+#: Explain why it was dropped in the body.
+extends: competency-question

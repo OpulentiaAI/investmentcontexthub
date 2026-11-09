@@ -1,0 +1,4 @@
+#: A finding the human judges to be a false alarm.
+#: Record why it does not hold.
+#: If an audit produced it, assess whether the audit or its application needs correction.
+extends: finding

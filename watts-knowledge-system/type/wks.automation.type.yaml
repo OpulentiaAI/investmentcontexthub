@@ -1,0 +1,29 @@
+#: One entry in the automation dictionary. The prompt IS the contract.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  slug: String
+  uses: wks.connector*[]
+  schedule: wks.schedule&
+  mode: [read-only, draft-then-wait, autonomous]
+  confirmWord: String
+  #: Must be yes before enabled may be yes. See first-open-gate.
+  firstOpenChecked: [yes, no]
+  firstOpenReceipt?: String
+  enabled: [yes, no]
+  costCeilingUsd: Number{>=0}
+  producesArtifact: String
+  #: Convex automation group + trigger ids once stood up on the Opulent account.
+  opulentAutomationGroupId?: String
+  opulentTriggerId?: String
+  sourceTemplate?: String
+  #: How the automation knows not to retrigger itself.
+  loopGuard: String
+  roleSkill?: String
+  playbook?: wks.playbook*
+  learningLoop?: String
+  proposedSchedule?: wks.schedule&
+body:
+  - section: Overview
+  - section: Prompt
+    guidance: "Verbatim pasteable Opulent prompt in a fenced block: the Create line, the Trigger line, numbered steps, and a CAUTION line."
+  - section: Forbidden Actions

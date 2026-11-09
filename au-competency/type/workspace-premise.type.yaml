@@ -1,0 +1,14 @@
+#: The purpose, warrant and scope of the governed work.
+#: Start from the person's stated intent and refine the premise in place.
+#: The three prose sections can begin rough.
+#: Name the practice or viewpoint that warrants the structure and link its doctrine.
+#: The governed work need not span every mounted repository.
+#: Select the premise relevant to the assignment when several exist.
+fields: {}
+body:
+  - section: Purpose
+    guidance: "State what this workspace is for in the person's own terms. Begin with the work it should support and sharpen the purpose as the subject becomes clearer."
+  - section: Warrant
+    guidance: "Name whose practice, evidence or viewpoint warrants this way of organizing the subject. A tentative answer is enough at setup. Relevant warrants include the available instances, the field's settled knowledge, the user's language and a stated cultural viewpoint."
+  - section: Out-of-scope
+    guidance: "Name the kinds of work this workspace leaves outside its purpose, with enough precision to decide whether a proposed question belongs. Refine the boundary as the work reveals it."

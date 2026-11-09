@@ -1,0 +1,15 @@
+#: A recurring decision with several useful representations or approaches.
+#: The optional section names provide a starting structure, not a ranking of shapes.
+#: Matching sections retain their declared order; authors may use other sections.
+extends: guide
+body:
+  - section?: The rule
+    guidance: "State the decision and the condition that makes the recommendation useful."
+  - section?: The shapes
+    guidance: "Compare the relevant choices and what each makes possible. Use examples that demonstrate the distinction."
+  - section?: When to move up
+    guidance: "Name the evidence for changing representation. A change can simplify or remove structure as well as add it."
+  - section?: The trap
+    guidance: "Explain a plausible mistake and the boundary the reader could miss."
+  - section?: To check
+    guidance: "Give a discriminating check of fit, and distinguish mechanical checks from semantic judgment."

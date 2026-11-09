@@ -1,0 +1,129 @@
+{
+  "$id": "convergence.prospect",
+  "version": "1.0.0",
+  "applies_to": "convergence/pipeline/prospects.csv — Stage D scoring of a resolved executive prospect",
+  "purpose": "Estimate the inputs of the published rubric (convergence/pipeline/scoring-rubric.md) as typed judgments, then compose them in code with the same weights the rubric publishes.",
+  "state_shape": {
+    "note": "Send only the fields each question needs (jaggedness #5). One state per prospect.",
+    "fields": ["company", "domain", "sector_bucket", "stage_evidence[]", "path_evidence[]", "person_title", "contact_status", "evidence_urls[]"]
+  },
+  "questions": {
+    "ipo_readiness": {
+      "type": "score",
+      "weight": 0.30,
+      "max_points": 30,
+      "level_points": [0, 6, 14, 22, 30],
+      "instructions": "Place this company on the IPO-readiness ladder using only the supplied stage_evidence. Judge the single highest applicable rung. If two or more independent rungs are evidenced, use the higher one.",
+      "criteria": [
+        "Growth-stage only: late round raised, no public-market readiness signal of any kind",
+        "Secondary or tender offer, or crossover public-market investors on the cap table",
+        "Late-stage round (Series D+ or 400M+ raised) with explicit path-to-public language",
+        "CFO or Chief Accounting Officer hired from a public company, or auditor upgraded to Big Four, within 18 months",
+        "Credible report of a confidential S-1 submission or a public S-1 on file"
+      ]
+    },
+    "transaction_fit": {
+      "type": "score",
+      "weight": 0.25,
+      "max_points": 25,
+      "level_points": [0, 6, 12, 18, 25],
+      "instructions": "How well does this company fit the stated mandate of at least one participating firm, as given in mandates_note? If mandates_note is absent, answer level 2 (unknown) and set mandates_missing true in the composition record.",
+      "criteria": [
+        "Outside every stated mandate",
+        "Adjacent sector, plausible but unstated interest",
+        "Unknown: no mandates note supplied",
+        "Inside a stated mandate, company size is a stretch for that firm",
+        "Squarely inside a stated mandate with size inside that firm's range"
+      ]
+    },
+    "path_strength": {
+      "type": "score",
+      "weight": 0.25,
+      "max_points": 25,
+      "level_points": [0, 8, 15, 20, 25],
+      "instructions": "Using only path_evidence entries that include an evidence_url, place this prospect on the relationship-path ladder. Pick the strongest single path. A path with no URL is not evidence and must be ignored.",
+      "criteria": [
+        "No evidenced path found",
+        "Board overlap two steps out",
+        "CFO-network or conference co-speaker overlap with a participating-firm partner",
+        "Named adviser relationship: counsel, auditor or underwriter publicly associated with the company, plus a working relationship with a participating firm",
+        "Portfolio company of a participating VC/PE, or a client/participating-firm nomination"
+      ]
+    },
+    "seniority": {
+      "type": "choice",
+      "weight": 0.10,
+      "max_points": 10,
+      "option_points": {
+        "ceo": 10, "cfo": 10, "president_or_coo": 7, "general_counsel_or_cao": 6,
+        "vp_finance_treasurer_or_ir": 4, "other_or_unclear": 0
+      },
+      "instructions": "Which of these best describes the resolved executive's current role at this company? Use the title on the person record; do not infer a promotion.",
+      "criteria": {
+        "ceo": "Chief Executive Officer or equivalent founder-CEO title",
+        "cfo": "Chief Financial Officer",
+        "president_or_coo": "President or Chief Operating Officer",
+        "general_counsel_or_cao": "General Counsel or Chief Accounting Officer",
+        "vp_finance_treasurer_or_ir": "VP Finance, Treasurer, Controller, or Head of Investor Relations",
+        "other_or_unclear": "Any other role, or the title is missing"
+      }
+    },
+    "reachability": {
+      "type": "score",
+      "weight": 0.10,
+      "max_points": 10,
+      "level_points": [0, 4, 6, 8, 10],
+      "instructions": "How reachable is this person through a business channel we are permitted to use? Judge from contact_status and public speaking history only.",
+      "criteria": [
+        "No business contact channel and no public speaking history",
+        "Public company leadership page or press mention only",
+        "Public speaking history at a comparable event in the last 24 months",
+        "Verified deliverable business email",
+        "Verified business email plus an assigned path owner who is willing to make the introduction"
+      ]
+    }
+  },
+  "gates": {
+    "note": "Gate nouls must clear on the safe side. A failed gate removes the prospect from Tier A/B regardless of composite score.",
+    "stage_is_ipo_or_pre_ipo": { "type": "noul", "direction": "at_least", "threshold": 0.80, "instructions": "Is this company at IPO stage or pre-IPO: publicly preparing for, reported to be preparing for, or recently through an IPO?" },
+    "identity_resolved": { "type": "noul", "direction": "at_least", "threshold": 0.90, "instructions": "Does the supplied evidence establish that this exact person currently holds this exact role at this exact company, rather than a similarly named person or a former role?" },
+    "restricted_entity": { "type": "noul", "direction": "at_most", "threshold": 0.05, "instructions": "Does this prospect appear anywhere on the client restrictions list, or is this company or firm flagged as excluded?" },
+    "is_vendor_or_consultant_not_executive": { "type": "noul", "direction": "at_most", "threshold": 0.15, "instructions": "Is this person an outside adviser, vendor, banker or consultant to the company rather than an executive employed by it?" }
+  },
+  "segment": {
+    "sector_bucket": {
+      "type": "choice",
+      "instructions": "Which sector bucket does this company belong to, using the definitions in the bucket descriptions? Do not relabel a company to fit a cap.",
+      "criteria": {
+        "fintech": "Payments, lending, banking software, insurance technology",
+        "healthcare_biotech": "Providers, devices, diagnostics, therapeutics, healthcare software",
+        "enterprise_software": "B2B software and infrastructure",
+        "industrial_energy": "Manufacturing, logistics, defense, climate and energy",
+        "consumer": "Consumer brands, marketplaces, consumer subscriptions",
+        "ai": "Model, data or AI-infrastructure companies",
+        "crypto": "Digital-asset exchanges, custody, protocols, on-chain infrastructure",
+        "other": "Anything that does not fit the buckets above"
+      }
+    }
+  },
+  "composition": {
+    "formula": "composite = 30*P(ipo_readiness)/max + 25*P(transaction_fit)/max + 25*P(path_strength)/max + 10*P(seniority)/max + 10*P(reachability)/max, where P(x) is the expected value sum(p*level_points) for score and sum(p*option_points) for choice",
+    "normalization": "Each component contributes its expected points directly (level_points are already on the rubric scale); the sum is the rubric score out of 100.",
+    "sector_adjustment": "Apply the sector-mix adjustment from the rubric in code after composition: 0 under target, -4 over target, -10 at hard cap (and no Tier A).",
+    "weights_owner": "convergence/pipeline/scoring-rubric.md — change both together or neither"
+  },
+  "routing": {
+    "tier_a_min_score": 70,
+    "tier_a_min_confidence": 0.85,
+    "tier_a_requires_confident_component": "path_strength",
+    "tier_a_component_min_confidence": 0.85,
+    "tier_b_range": [50, 69],
+    "tier_b_min_confidence": 0.6,
+    "human_review_band": "composite confidence < 0.6, or any gate noul inside 0.4-0.6, or rank abstention"
+  },
+  "known_failures": [
+    {"case": "Company with a large late round and no readiness signal scored as pre-IPO", "fix": "Level 3 requires the CFO/auditor signal or higher; the late round alone is level 3 of 5, never level 4+"},
+    {"case": "A path described in prose but with no evidence_url counted as evidence", "fix": "Instruction now states that a path without a URL must be ignored"}
+  ],
+  "authoring_rules": "See jev/DECISION-LAYER.md D1: one dimension per question, levels are the rubric, filtered state, literal instructions, no counting or date math, expectation for thresholds only, one shape per decision."
+}

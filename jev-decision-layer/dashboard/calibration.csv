@@ -1,0 +1,9 @@
+decided_at,decision_id,surface,question_id,kind,stated_probability,threshold,gate_result,routing_outcome,realized_outcome,group,brier
+2026-09-18T04:37:41Z,jev-2026-09-18-004,interaction.screen,screen.injection,turbo_rerank_readme,screen,0.07,0.50,passed,admit,0,gate_injection,0.0049
+2026-09-18T04:37:41Z,jev-2026-09-18-004,interaction.screen,screen.relevance,turbo_rerank_readme,screen,3.88,2.50,passed,admit,,gate_relevance,
+2026-09-18T04:37:41Z,jev-2026-09-18-007,interaction.screen,screen.injection,composite_scoring_doc,screen,0.06,0.50,passed,admit,0,gate_injection,0.0036
+2026-09-18T04:37:41Z,jev-2026-09-18-005,interaction.screen,screen.injection,injection_control_1,screen,0.98,0.80,failed,reject,1,gate_injection,0.0004
+2026-09-18T04:37:41Z,jev-2026-09-18-003,interaction.rank,rank.typesafe_mcp,repos_adoption,rank,0.17,,,abstained,,rank_abstained,
+2026-09-18T04:37:41Z,jev-2026-09-18-003,interaction.rank,rank.turbo_rerank,repos_adoption,rank,0.08,,,abstained,,rank_abstained,
+2026-09-18T04:37:41Z,jev-2026-09-18-006,interaction.rank,rank.budget_signoff,open_decisions,rank,0.23,,,abstained,,rank_abstained,
+2026-09-18T04:37:41Z,jev-2026-09-18-006,interaction.rank,rank.monid_topup,open_decisions,rank,0.01,,,abstained,,rank_abstained,

@@ -1,0 +1,17 @@
+#: An implemented change has been built by improve and its accepted behavior demonstrated.
+#: It is terminal and uses the parent body.
+#: The lifecycle claim records completion, it does not supply the evidence itself.
+extends: proposal
+fields:
+  #: Questions the completed scope actually closed.
+  #: Present answers must target competency-question.answered.
+  #: A wrong target state produces a diagnostic, not proof of write refusal.
+  #: The range does not establish that the question's requirement was met.
+  #: Optional for a recurrence proposal or a completed prerequisite that leaves
+  #: the larger competency open.
+  #: After demonstrating the promised behavior, improve records each question's
+  #: answer first, then marks the proposal implemented.
+  #: Declared per leaf because inherited fields cannot be narrowed.
+  answers?: competency-question.answered*[]
+body:
+  - use: proposal

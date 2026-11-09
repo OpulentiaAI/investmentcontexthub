@@ -1,0 +1,36 @@
+#: One measurable experiment over the motion, with its outcome recorded.
+#: Borrowed from the bug-hunting loop: state the hypothesis, the measure and the
+#: threshold before the run, then record what actually happened.
+#: A silent experiment is not a failed experiment. Silence is UNVERIFIED.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  #: What one observation is. Counted in code, never estimated by a model.
+  unit: String
+  #: The claim under test, phrased so it could be wrong.
+  hypothesis: String
+  #: The single number that decides it.
+  measure: String
+  #: The line that separates supported from not. Set before the run.
+  threshold: Number
+  direction: [at_least, at_most]
+  #: What must be true before this may run. Includes any approval it needs.
+  preconditions: String[+]
+  #: observed     - collected and within the window.
+  #: insufficient - too few observations to decide. Not the same as "no effect".
+  #: inconclusive - the numbers moved for a reason we cannot attribute.
+  #: supported / refuted - the threshold was cleared or missed.
+  state: [proposed, running, observed, insufficient, inconclusive, supported, refuted]
+  #: The actual number, once observed. Absent until then - never a placeholder zero.
+  observedValue?: Number
+  #: How many observations the value rests on. Small n is stated, not hidden.
+  sampleSize?: Number{integer}
+  #: Minutes of wall-clock the run cost, when known.
+  costMinutes?: Number{>=0}
+  #: What changed as a result. An experiment nobody acts on is a hobby.
+  decision?: String
+  #: Set only when a human approved a promotion of this result into code or policy.
+  #: Silence here is not consent, and no automation may set this.
+  promotedBy?: String
+  #: A run that has not resolved yet says so. It is never rendered as a failure.
+  unresolvedNote?: String
+  evidence?: wks.evidence&[]

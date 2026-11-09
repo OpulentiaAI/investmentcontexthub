@@ -1,0 +1,6 @@
+#: An abstract marker for a perspective on a subject.
+#: A concrete perspective kind includes lens in extends alongside its natural parent.
+#: For example, extends: [idea, lens] defines a kind whose instances claim that kind.
+#: Each perspective kind declares its own typed subject and other fields.
+#: The marker itself has no fields and cannot be claimed by an instance.
+abstract: true

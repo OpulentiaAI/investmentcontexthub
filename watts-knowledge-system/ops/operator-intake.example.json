@@ -1,0 +1,27 @@
+{
+  "ownerId": "[NEED: OPERATOR_ACCOUNT_ID]",
+  "workspaceId": "[NEED: OPERATOR_WORKSPACE_ID]",
+  "repo": "investmentcontexthub",
+  "observations": {
+    "owner": {
+      "path": "[NEED: private evidence path]",
+      "sha256": "[NEED: sha256]"
+    },
+    "workspace": {
+      "path": "[NEED: private evidence path]",
+      "sha256": "[NEED: sha256]"
+    },
+    "runtime": {
+      "path": "[NEED: private evidence path]",
+      "sha256": "[NEED: sha256]"
+    },
+    "sources": {
+      "path": "[NEED: private evidence path]",
+      "sha256": "[NEED: sha256]"
+    }
+  },
+  "starter": {
+    "slug": "watts-source-manifest-review",
+    "paidToolsEnabled": false
+  }
+}

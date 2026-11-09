@@ -1,0 +1,5 @@
+#: A retired question excluded from the live tree and research queue.
+#: Mediation retires off-scope or duplicate leads.
+#: A person can also set a question aside.
+#: Retain the note as a record and leave it retired unless the user directs otherwise.
+extends: question

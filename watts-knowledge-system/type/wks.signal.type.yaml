@@ -1,0 +1,23 @@
+#: A class of buying trigger. Not an observed instance - see wks.observation.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  #: 1 is the strongest intent.
+  rank: Number{integer}
+  #: Where this can actually be observed.
+  sourceSystems: String[+]
+  #: Spear trigger names that feed this signal, per [[spear-automation-map]].
+  spearTriggers?: String[]
+  #: The concrete filter or search that finds it.
+  query: String
+  #: What a row must cite before it counts.
+  citationRequirement: String
+  #: Days after which the signal is stale.
+  decayDays: Number{integer}
+  #: Things that look like this signal and are not.
+  falsePositives: String[+]
+  #: How it becomes a first line.
+  openerAngle: String
+  evidence?: wks.evidence&[]
+body:
+  - section: How to detect
+  - section: How to disqualify

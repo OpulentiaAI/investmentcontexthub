@@ -1,0 +1,14 @@
+#: A correction with a demonstrated remedy.
+#: Preserve the original feedback in the inherited body.
+#: An accepted write proves neither a valid record nor a working remedy.
+extends: correction
+fields:
+  #: The remedy shown to address this correction's friction.
+  forged_into: any*
+  #: The forged original occurrence.
+  #: Omit for a first occurrence.
+  #: Forge the root before a recurrence.
+  #: An incompatible root produces a diagnostic.
+  recurs?: correction.forged*
+body:
+  - use: correction

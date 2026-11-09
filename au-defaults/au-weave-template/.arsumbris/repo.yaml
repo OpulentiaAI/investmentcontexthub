@@ -1,0 +1,27 @@
+type: au.engine.repo::au-engine
+name: au-weave-template
+description: Turn source material into connected notes. Includes the standard app layout with tools for ingestion, research, writing guidance and building a knowledge graph.
+deps:
+  - name: au-weave
+  - name: au-ingest
+  - name: au-tree-research
+  - name: au-writing-style
+  - name: agent-sessions
+  - name: au-avatar
+  - name: au-host-sdk
+  - name: au-mcp-adapter-codex
+  - name: au-mcp-sdk
+  - name: aup-reader
+  - name: aup-workspace-sidebar
+  - name: bento
+  - name: column
+  - name: editor
+  - name: file-tree
+  - name: force-graph
+  - name: intent
+  - name: media-viewers
+  - name: placeholder-picker
+  - name: sandwich
+  - name: tabs
+  - name: terminal
+  - name: au-mcp-adapter-cc

@@ -1,0 +1,14 @@
+#: A requirement the workspace now meets.
+#: Improve records the working answer after demonstrating the behavior.
+#: Research or an unexecuted design does not establish completion.
+#: Keep this terminal record closed if the capability later regresses.
+extends: competency-question
+fields:
+  #: The working capability that satisfies the requirement.
+  #: Prefer its actual entry point or composition.
+  #: A verification artifact can identify a distributed answer and its observed results.
+  #: An arbitrary installed component does not substantiate the whole requirement.
+  #: A missing reference produces a diagnostic.
+  #: An existing reference alone does not prove behavior.
+  #: A body contribution needs an answered_by anchor in frontmatter.
+  answered_by: any*

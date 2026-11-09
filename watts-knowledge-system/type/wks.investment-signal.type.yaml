@@ -1,0 +1,10 @@
+#: A point-in-time investment view emitted by an analyst/model.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  mandate: String
+  asset: String
+  analyst: String
+  conviction: Number
+  horizonDays?: Number{integer}
+  thesis: String
+  evidence?: wks.evidence&[]

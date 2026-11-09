@@ -1,0 +1,10 @@
+#: A private-safe captured derivative of owner-system material.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  provider: String
+  sourceSystem: String
+  captured: Date
+  scope?: String
+  sha256?: String
+  privacy: [private, public]
+  artifactRef?: String

@@ -1,0 +1,9 @@
+#: How a Watts search actually progresses.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  stages: wks.stage&[]
+  systemOfRecord: String
+  writeBackPolicy: String
+body:
+  - section: Flow
+  - section: Guardrails

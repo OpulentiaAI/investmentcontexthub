@@ -1,0 +1,13 @@
+layout: watts-knowledge-system-v1
+surfaces:
+  watts: entities connectors captures concepts claims maps signals playbooks runbooks automations research skills inject catalogs
+  operator: ops evidence runs private intake receipts
+sources:
+  raw: sources/ # never committed
+  captures: captures/ # typed, hashed, private-safe derivatives
+  graph: entities/ concepts/ claims/ maps/
+knowledge:
+  spine: captures -> claims -> concepts -> maps -> entities
+  provenance: every claim carries evidence_kind and grounded_in
+investing:
+  spine: portfolio-mandate -> investment-signal -> investment-decision -> forecast -> scorecard

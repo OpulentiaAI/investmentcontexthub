@@ -1,0 +1,9 @@
+# Select this profile to use the Arscontexta working method.
+# The capabilities stay in their owning packages; a personal profile can reference the same injects.
+# Skills and tools use the platform defaults. This profile changes only standing instructions.
+type: agent-profile::au-mcp-sdk
+inject:
+  - "[[co-inhabitant]]"
+  - "[[core-profile::au-writing-style]]"
+  - "[[core-profile::au-rules]]"
+  - "[[capture-correction::au-govern]]"

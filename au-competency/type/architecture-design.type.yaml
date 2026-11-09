@@ -1,0 +1,49 @@
+#: An explanation of how workspace mechanisms cooperate to deliver one capability.
+#: Keep a small design in the proposal.
+#: This record has no approval lifecycle.
+#: The proposal holds approval and improve builds the accepted scope.
+fields:
+  #: The capability this architecture explains, in one retrieval sentence.
+  tldr: String
+  #: Graph references to evidence and contracts supporting the design.
+  #: Explain what each source supports in the body.
+  grounds: any*[+]
+  #: Requirements addressed by the design.
+  #: This relation does not mark them answered.
+  #: Omit when the design follows a direct brief with no competency.
+  competencies?: competency-question*[]
+body:
+  - section: The capability
+    guidance: >-
+      State the requested behavior and scope.
+      Explain how someone would recognize success.
+      Name neighboring capabilities and excluded work.
+      Ground a direct brief in its intent and the available contracts.
+  - section: The design
+    guidance: >-
+      Explain the cooperating mechanisms and the obligation each fulfills.
+      Identify authoritative records and their owners.
+      Connect the choices to evidence and compare adequate existing routes.
+      Explain how the design can be extended through its contracts.
+  - section: Making it usable
+    guidance: >-
+      Name entry points, consumers and the operations that perform the work.
+      Check their inputs, outputs and permitted effects.
+      A data extension does not grant an operation new effects.
+      Explain discovery, invocation and activation.
+      Include migration and interruption recovery where needed.
+      Identify who owns any missing integration.
+  - section: Verification
+    guidance: >-
+      Give representative success and failure cases.
+      Name the evidence each guarantee needs.
+      Separate expected results from observations.
+      Record source or runtime revisions when they affect the result.
+      Check behavior and meaning beyond structural diagnostics.
+  - section: Still open
+    guidance: >-
+      Name unresolved dependencies and the obligations they affect.
+      State what would resolve them.
+      Preserve deferred work and the caller's scope.
+      If no architectural choice remains, say so.
+      Identify implementation checks still due.

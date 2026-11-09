@@ -1,0 +1,10 @@
+.DS_Store
+
+# au engine runtime cruft (a wired vault generates these)
+operations/
+.arsumbris/*.sock
+.arsumbris/*.lock
+
+# python bytecode
+__pycache__/
+*.pyc

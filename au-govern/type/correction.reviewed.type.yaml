@@ -1,0 +1,10 @@
+#: An assessed correction with no action pending.
+#: It remains discoverable through the correction family and recurs.
+#: Capture returning friction as a new open correction.
+extends: correction
+fields:
+  #: The original occurrence this correction repeats.
+  #: Omit for a first occurrence.
+  recurs?: correction*
+body:
+  - use: correction

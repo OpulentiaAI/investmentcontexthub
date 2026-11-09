@@ -1,0 +1,7 @@
+#: A question available for research.
+#: Query this type within a premise's tree to find its open questions.
+#: An interruption can leave a saved article awaiting review and state completion.
+#: Research changes this state to researched after reviewing the answer.
+#: Mediation can retire unwanted open questions as dropped.
+#: Child questions do not determine this question's state.
+extends: question

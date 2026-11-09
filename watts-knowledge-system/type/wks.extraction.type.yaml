@@ -1,0 +1,21 @@
+#: A runbook for pulling a source system's data into this hub.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  sourceSystem: String
+  accessPath: [mcp, api, browser, cli, export]
+  requiresAuth: [yes, no]
+  authOwner: String
+  #: e.g. "codemode + mcp access"
+  method: String
+  coordinatorRoute?: String
+  workerRoute?: String
+  outputs: String[+]
+  #: How to know it already ran, so we never duplicate.
+  idempotency: String
+  evidence?: wks.evidence&[]
+body:
+  - section: Preconditions
+  - section: Procedure
+  - section: Proof of delivery
+    guidance: "What file counts, artifact rows or hashes prove this landed. 'completed' is never proof."
+  - section: Do not repeat if

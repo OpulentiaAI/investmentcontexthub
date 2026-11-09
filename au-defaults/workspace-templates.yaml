@@ -1,0 +1,122 @@
+type: workspace-template-manifest::au-host-sdk
+templates:
+  - path: studio
+    name: Blank
+    description: "Our blank Ars Umbris default: the full standard workspace, ready for your own files. Includes files and a map on the left, documents in the middle, and agent sessions with Umbra on the right."
+    highlights:
+      - The standard layout, default shortcuts and a short guide to get started
+      - Browse files, edit documents and follow connections
+      - Includes Claude Code and Codex profiles; account setup is separate
+    preview:
+      axis: row
+      children:
+        - axis: column
+          weight: 1
+          children:
+            - kind: tree
+              label: Files
+              weight: 4
+            - kind: empty
+              label: Force graph
+        - kind: document
+          label: Documents
+          weight: 3.5
+        - axis: column
+          weight: 1.25
+          children:
+            - kind: list
+              label: Sessions
+              weight: 5
+            - kind: empty
+              label: Umbra
+    initialComposition: "[[studio]]"
+  - path: au-tree-research-template
+    name: Deep research
+    description: Build a research tree around a question. Includes the standard app layout and the research package for defining a premise, investigating questions and choosing what to explore next.
+    highlights:
+      - Start with the research guide in the Reader
+      - Includes au-tree-research and its research workflow
+      - Create your own premise and questions; no example research is prefilled
+    preview:
+      axis: row
+      children:
+        - axis: column
+          weight: 1
+          children:
+            - kind: tree
+              label: Files
+              weight: 4
+            - kind: empty
+              label: Force graph
+        - kind: document
+          label: Documents
+          weight: 3.5
+        - axis: column
+          weight: 1.25
+          children:
+            - kind: list
+              label: Sessions
+              weight: 5
+            - kind: empty
+              label: Umbra
+    initialComposition: "[[workspace-layout]]"
+  - path: au-weave-template
+    name: Weave
+    description: Turn source material into connected notes. Includes the standard app layout with tools for ingestion, research, writing guidance and building a knowledge graph.
+    highlights:
+      - Start with guidance for bringing in documents and research
+      - Includes au-weave, au-ingest, au-tree-research and au-writing-style
+      - Work through sources with premise, mine, cut, weave and reweave
+    preview:
+      axis: row
+      children:
+        - axis: column
+          weight: 1
+          children:
+            - kind: tree
+              label: Files
+              weight: 4
+            - kind: empty
+              label: Force graph
+        - kind: document
+          label: Documents
+          weight: 3.5
+        - axis: column
+          weight: 1.25
+          children:
+            - kind: list
+              label: Sessions
+              weight: 5
+            - kind: empty
+              label: Umbra
+    initialComposition: "[[workspace-layout]]"
+  - path: au-arscontexta-template
+    name: Arscontexta (experimental)
+    description: An experimental workspace for developing knowledge and the guidance your agents use alongside it. Includes the standard app layout, a working profile and an initialization skill.
+    highlights:
+      - Use the included initialization skill to define a purpose and first task
+      - Includes knowledge, ingestion, governance and competency packages
+      - "Experimental: the working method and package set may change"
+    preview:
+      axis: row
+      children:
+        - axis: column
+          weight: 1
+          children:
+            - kind: tree
+              label: Files
+              weight: 4
+            - kind: empty
+              label: Force graph
+        - kind: document
+          label: Documents
+          weight: 3.5
+        - axis: column
+          weight: 1.25
+          children:
+            - kind: list
+              label: Sessions
+              weight: 5
+            - kind: empty
+              label: Umbra
+    initialComposition: "[[workspace-layout]]"

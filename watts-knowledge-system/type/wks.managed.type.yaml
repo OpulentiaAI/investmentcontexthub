@@ -1,0 +1,14 @@
+#: Mixin for anything this hub actively maintains.
+#: Carries the provenance and lifecycle fields every managed node needs.
+abstract: true
+fields:
+  #: Lifecycle of this entry, not of the thing it describes.
+  status: [draft, active, paused, retired, blocked]
+  #: Who is accountable. A human name, or "Opulent".
+  owner: String
+  #: When this entry was last revised.
+  updated: Date
+  #: Where this knowledge came from. "UNVERIFIED" when nothing backs it.
+  provenance: String
+  #: watts = may be mounted on Jeremy's Opulent workspace. operator = ops/ only.
+  surface?: [watts, operator]

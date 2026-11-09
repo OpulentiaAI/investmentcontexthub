@@ -1,0 +1,8 @@
+#: A source note for captured material, such as a page or document.
+#: Its body may contain captured text or a converted representation.
+extends: node
+fields:
+  #: Where the material came from, such as a URL or shelf location.
+  origin?: String
+  #: The original file this note derives from, as an unpinned whole-file reference.
+  original?: file*

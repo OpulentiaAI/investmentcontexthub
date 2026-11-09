@@ -1,0 +1,16 @@
+#: A research question whose answer lives in separate articles.
+#: Claim one concrete state: open, researched or dropped.
+#: The sealed family checks compatible state claims.
+#: The workflow checks transition order and whether an answer exists.
+#: Its parent places the question in the tree.
+#: The workflow also checks cycles and reachability from a premise.
+sealed: [question.open, question.researched, question.dropped]
+fields:
+  #: The question's subject in one line for retrieval and the computed map.
+  tldr: String
+  #: The self-contained investigation prompt.
+  #: Retain it on the question so answering articles can trace their purpose.
+  prompt: String
+  #: The question or premise directly above this question.
+  #: An entry question points to the premise.
+  parent: <question | research-premise>*

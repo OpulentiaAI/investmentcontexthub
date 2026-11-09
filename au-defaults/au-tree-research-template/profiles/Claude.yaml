@@ -1,0 +1,2 @@
+type: agent-profile::au-mcp-sdk
+adapter: "[[mcp.adapter.cc::au-mcp-adapter-cc]]"

@@ -1,0 +1,10 @@
+# Folder-repo identity (au.engine.repo). Without this the daemon hard-refuses the entry (entry-not-a-repo).
+# deps: TYPE-dependencies only, folded into the closure-hash. Empty BY DESIGN: au-base-types is the
+# self-contained base. It owns its own roots and depends on no vocabulary (the engine is its only substrate).
+type: au.engine.repo::au-engine
+name: au-base-types
+# remote: the git anchor, so identity + location travel with the repo. A consumer declares
+# `- name: au-base-types` and the engine can fetch us on any machine, pinned by commit sha.
+remote: git@github.com:arsumbris/au-base-types.git
+description: the base ontology of the Ars Umbris vault. a small, self-contained typed grammar of reasoned knowledge (thing / idea / event / source) that every knowledge repo mounts and extends by subtyping, with meaning routed to read-time lenses.
+deps: []

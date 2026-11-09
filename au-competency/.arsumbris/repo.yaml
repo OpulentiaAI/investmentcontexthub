@@ -1,0 +1,9 @@
+# Package identity and intrinsic vocabulary dependencies.
+type: au.engine.repo::au-engine
+name: au-competency
+description: Develop and deliver supported workspace improvements using governance signals and reusable research.
+deps:
+  - name: au-govern
+  - name: au-tree-research
+  - name: au-mcp-sdk
+  - name: au-skills

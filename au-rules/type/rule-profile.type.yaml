@@ -1,0 +1,11 @@
+#: A rule-profile is a named floor, a typed selection over the rules it bundles.
+#: It references its rules, never copies them. the agent-profile idiom, applied to the discipline floor.
+#: OPEN. the rules field's presence is the restriction. absent is the whole floor, a subset is a narrower profile, an empty list is none.
+#: A profile activates by mixing in mcp.inject at depth 1, and an inject needs a body. so a profile is a `.md` note, and its body is a short frame the injected rules land under.
+#: The profile is the only inject. a rule is a plain atom it carries, never an inject on its own.
+fields:
+  #: the rules this profile bundles, references into the discovered set. absent is every rule.
+  rules?: rule*[]
+body:
+  - section?: the floor
+    guidance: "One short line, the frame an injecting profile seeds before its rules. Name the floor and point at the rules, then stop. the rules carry the detail."

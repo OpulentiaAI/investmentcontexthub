@@ -1,0 +1,9 @@
+#: An abstract trait for kinds whose instances can name a successor.
+#: A concrete kind opts in through extends: [your-kind, supersede].
+#: Instances claim that concrete kind and may set superseded_by on the older note.
+#: Existing links still reach the older note.
+abstract: true
+fields:
+  #: The successor to this note, which may be of a different kind.
+  #: Omit when this note has no successor.
+  superseded_by?: any*

@@ -1,0 +1,52 @@
+#: One execution of an extraction against one source. The record, not the procedure.
+#: wks.extraction is the runbook; this is what actually happened when it ran.
+extends: [event::au-base-types, wks.managed]
+fields:
+  #: Which source row this run advanced. The manifest is the coverage ledger.
+  sourceId: String
+  #: The runbook followed, when the source has one.
+  runbook?: wks.extraction*
+  #: Which person's dataset this run read. Never merge two owners' counts.
+  datasetOwner?: String
+  #: full = everything the source holds. delta = only what arrived since lastRunAt.
+  #: A delta run never claims to have covered the whole source.
+  scope: [full, delta]
+  #: The run this one continues, when scope is delta. Absent for a first run.
+  continuingFrom?: String
+  #: When the source was read. The date the claim is true as of.
+  observedAt: Date
+  #: What this run pulled, in plain description.
+  produced: String[+]
+  #: Counts that prove delivery. A count of zero is a real, reportable result.
+  recordCount: Number{>=0}
+  fileCount: Number{>=0}
+  #: Pagination, recorded so contiguity can be checked rather than assumed.
+  #: Pages actually captured, and how many the source said there were.
+  pagesCaptured?: Number{integer}
+  pagesExpected?: Number{integer}
+  pageIndices?: Number{integer}[+]
+  pageSize?: Number{integer}
+  #: COMPLETE only when the captured pages are contiguous and reach the expected
+  #: count. Derived from the pages above, never from a file being present.
+  completeness: [COMPLETE, INCOMPLETE, ERROR, UNKNOWN]
+  #: yes when a large-output path truncated a payload. A truncated read is a
+  #: defect to carry forward, not a smaller result to accept quietly.
+  truncated: [yes, no]
+  #: Named error stubs or defects found in this run, verbatim.
+  errors?: String[+]
+  #: Where the material landed. Name only - the archive itself stays private.
+  #: A public repository may carry this reference; never carry the content.
+  artifactRef?: String
+  #: Recompute this after download. An unchecked hash is not proof.
+  artifactSha256?: String
+  #: ok            - landed and proved by the counts and hash above.
+  #: partial       - landed but incomplete for this source. Name what is missing.
+  #: failed        - did not land. Name the failure verbatim.
+  #: unavailable   - could not start: a click, a seat or a plan is missing.
+  outcome: [ok, partial, failed, unavailable]
+  #: What this run did NOT get, required unless outcome is ok. The gap is the point.
+  missing?: String[+]
+  #: Required when outcome is failed or unavailable. Verbatim error, not a summary.
+  blockerNote?: String
+  privacy: [private, public]
+  evidence?: wks.evidence&[]

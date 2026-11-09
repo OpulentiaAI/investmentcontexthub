@@ -1,0 +1,19 @@
+#: A company we sell to, partner with, or have excluded.
+#: Extends thing: it exists and persists, and other knowledge refers to it.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  #: Registered name, when it differs from the common name.
+  legalName?: String
+  #: Primary web domain, no scheme.
+  domain?: String
+  #: What they do. Never inferred from a website's styling or framework.
+  industry?: String
+  #: Headcount. Omit rather than estimate.
+  employeeCount?: Number{integer}
+  #: Headquarters city.
+  hq?: String
+  #: Our standing with them.
+  relationship: [client, prospect, partner, vendor, self, excluded]
+  #: Citations for every claim above.
+  evidence?: wks.evidence&[]
+  notes?: String

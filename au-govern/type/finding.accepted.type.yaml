@@ -1,0 +1,4 @@
+#: A real deviation the human chooses to retain.
+#: Record the ruling and its reason in the body.
+#: Acceptance records an exception, not a repair.
+extends: finding

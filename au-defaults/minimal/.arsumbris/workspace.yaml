@@ -1,0 +1,6 @@
+type: au.engine.workspace::au-engine
+edit:
+  - minimal                   # the containing repo, required (rewritten to the new name on create)
+discover:
+  - host-bundle
+  - mcp-bundle

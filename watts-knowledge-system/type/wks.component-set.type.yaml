@@ -1,0 +1,14 @@
+#: Named parts of one outbound email. Fill every part or mark it [NEED].
+extends: [idea::au-base-types, wks.managed]
+fields:
+  channel: [email]
+  wordCap: Number{integer}
+body:
+  - section: From
+  - section: Subject
+  - section: Preview
+  - section: First line
+  - section: Body
+  - section: Action
+  - section: Sign-off
+  - section: Plain text

@@ -1,0 +1,27 @@
+extends: [idea::au-base-types, wks.managed]
+fields:
+  issueId: String
+  scope: String
+  symptom: String
+  phase: [detected, investigating, blocked, mitigated, resolved]
+  windowStart: String
+  windowEnd: String
+  runtimeRevision: String
+  evidenceRef: String
+  evidenceSha256: String
+  baselineStatus: [available, unavailable]
+  baselineRef?: String
+  baselineSha256?: String
+  limitation?: String
+  blockerNote?: String
+  conclusion: [unverified, inconclusive, confirmed]
+  causeObservedAt?: String
+  mechanism?: String
+  alternatives?: String
+  changeRef?: String
+  changeAppliedAt?: String
+  verificationRef?: String
+  verificationSha256?: String
+body:
+  - section: Investigation
+  - section: Resolution

@@ -1,0 +1,17 @@
+#: Human feedback about agent behavior, retained so recurrence remains visible.
+#: Claim one lifecycle leaf:
+#: - Open awaits assessment
+#: - Reviewed records an assessment with no action pending
+#: - Forged identifies a demonstrated remedy
+#:
+#: Keep the original feedback when recording its disposition.
+#: A returning friction becomes a new open correction linked to the original through recurs.
+sealed:
+  - correction.open
+  - correction.reviewed
+  - correction.forged
+body:
+  - section: What I did
+    guidance: "State the behavior the human corrected, without softening it."
+  - section: What they wanted
+    guidance: "State the requested behavior, using the human's words where useful."

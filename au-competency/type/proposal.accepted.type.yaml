@@ -1,0 +1,14 @@
+#: An accepted change has the human's ruling and waits to be built by improve.
+#: Query proposal.accepted for approved work awaiting implementation.
+#: Acceptance covers the stated scope and relevant architecture revision.
+#: A later design revision does not silently expand that scope.
+extends: proposal
+fields:
+  #: Questions the completed accepted scope promises to close, still in any state.
+  #: Acceptance itself demonstrates no behavior and closes no question.
+  #: Optional for a recurrence proposal or a useful prerequisite that leaves
+  #: the larger competency open.
+  #: Declared per leaf so implemented can require answered targets.
+  answers?: competency-question*[]
+body:
+  - use: proposal

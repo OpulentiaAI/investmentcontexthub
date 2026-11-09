@@ -1,0 +1,77 @@
+#: One source of truth this hub draws from, and how complete our coverage of it is.
+#: Completeness is manifest-based: a coverage claim names the row that backs it.
+#: A connected source with no row is a gap, never an implicit zero.
+#:
+#: Registry state is not reach. A connector can read "Connected" in a settings
+#: page and still have no tokens and no readable scope. `reach` and
+#: `authorization` are recorded separately from `state` for exactly that reason.
+extends: [thing::au-base-types, wks.managed]
+#: NOTE: the fields below describe ONE ROW. They are declared optional
+#: at file level because a manifest is a container; row completeness is
+#: enforced per entry by scripts/validate.py's manifest check.
+fields:
+  #: The rows. One entry per source of truth.
+  sources?: wks.source-manifest-row&[]
+  #: Stable key. One row per source, reused across extractions.
+  sourceId?: String
+  #: How the source is reached. Not a judgement about whether it is connected.
+  kind?: [mcp, native, composio, oauth, api, browser, cli, export, human, local-import]
+  #: What we can actually read, independent of what a registry displays.
+  #: readable         - tokens or bytes are in hand now.
+  #: refreshable      - stored refresh token; one authorized run restores access.
+  #: discovered       - tools enumerated, no tokens. Not readable yet.
+  #: captured-artifact - we hold a captured export rather than live access. The
+  #:                     artifact is readable; the source behind it is not. This
+  #:                     is the honest state for an import or a delivered export.
+  #: none             - registered only. No reach at all.
+  reach?: [readable, refreshable, discovered, captured-artifact, none]
+  #: live     - authorized to read right now.
+  #: past-use - we used it before; that is history, not current permission.
+  #: none     - never authorized, or authorization lapsed.
+  authorization?: [live, past-use, none]
+  #: pending     - reachable, no extraction yet. The honest default.
+  #: extracting  - a run is in flight right now.
+  #: extracted   - this row's coverage of this source has landed and been proved.
+  #: unavailable - an auth click, a seat or a paid plan is missing. Name the blocker.
+  #: blocked     - reachable but a specific failure stops it. Name the blocker.
+  state?: [pending, extracting, extracted, unavailable, blocked]
+  #: When the state above was last observed. A stale date is a stale claim.
+  lastObservedAt?: Date
+  #: Days after which this row's coverage should be considered stale and re-read.
+  staleAfterDays?: Number{integer}
+  #: The extraction runbook this source is pulled through, when one exists.
+  extractionRunbook?: wks.extraction*
+  #: The most recent run against this source. Absent while state is pending.
+  lastRun?: wks.extraction-run*
+  #: How many entities this source exposes, and how many we have actually read.
+  #: A source with 28 entities and 6 captured is 21 entities short, explicitly.
+  #: Omit rather than estimate. These are counted, never guessed.
+  entitiesAvailable?: Number{integer}
+  entitiesCaptured?: Number{integer}
+  #: FULL | PARTIAL | ERROR | UNKNOWN. Derived from page contiguity, never from
+  #: the presence of a file. A `ready` artifact is not evidence of completeness.
+  completeness?: [FULL, PARTIAL, ERROR, UNKNOWN]
+  #: Whose data this is. Different people's datasets are different sources and
+  #: are never merged into one count, even when they come from the same tool.
+  datasetOwner?: String
+  #: yes when this source carries suppression or policy rows (do-not-contact,
+  #: denial reasons, blacklists). Suppression is read before any outreach work,
+  #: and a source marked yes that has not been read blocks outreach planning.
+  suppressionSurface?: [yes, no]
+  #: Scopes we may use, and scopes that exist but must never be exercised.
+  #: A granted write scope that is not listed here is still forbidden by default.
+  readScopes?: String[+]
+  forbiddenScopes?: String[+]
+  #: What this source actually contributed. Plain description, no counts.
+  covers?: String
+  #: What it does NOT contribute. Required: the absence is the important part.
+  #: Example: a prospect corpus does not cover the mailbox, the voice or the history.
+  doesNotCover?: String[+]
+  #: Required when state is unavailable or blocked. Verbatim, not paraphrased.
+  blockerNote?: String
+  #: private = the extracted material never enters this public repository.
+  #: public  = the material is safe to commit here.
+  #: The manifest row itself is public either way; it carries names and hashes,
+  #: never the extracted content. This row is `public`-class by construction.
+  privacy?: [private, public]
+  evidence?: wks.evidence&[]

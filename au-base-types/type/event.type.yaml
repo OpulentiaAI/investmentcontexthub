@@ -1,0 +1,7 @@
+#: A happening at a time, such as a meeting or launch.
+extends: node
+fields:
+  #: The day it happened.
+  date: Date
+  #: The things that took part.
+  involved?: thing*[]

@@ -1,0 +1,8 @@
+#: A generated index over part of the graph.
+#: Extends map: a slice of the graph presented as a page.
+extends: [map::au-base-types, wks.managed]
+fields:
+  indexes: [tools, workflows, skills, tactics, automations, extractions, signals, playbooks, channels]
+  entryCount: Number{integer}
+body:
+  - section: Index

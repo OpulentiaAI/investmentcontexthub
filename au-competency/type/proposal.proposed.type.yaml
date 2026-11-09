@@ -1,0 +1,14 @@
+#: A proposed change is raised and waiting on the human's ruling.
+#: Query proposal.proposed for changes awaiting a ruling.
+#: The proposal can combine the mechanisms needed for one coherent change.
+extends: proposal
+fields:
+  #: Questions the completed proposal promises to close, still in any state.
+  #: This promise does not mark them answered now.
+  #: Optional for a recurrence proposal or a useful prerequisite that leaves
+  #: the larger competency open.
+  #: Keep that remaining requirement visible in the body.
+  #: Declared per leaf so implemented can require answered targets.
+  answers?: competency-question*[]
+body:
+  - use: proposal

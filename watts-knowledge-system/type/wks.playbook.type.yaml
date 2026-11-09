@@ -1,0 +1,19 @@
+#: One specialist module in the outbound motion. The body is the contract.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  #: Specialist role this module owns.
+  role: String
+  #: Short module key: signals, icp, scoring, …
+  module: String
+  #: What must be in hand before this module runs.
+  inputs: String[+]
+  #: Who receives the output.
+  nextOwner: String
+  relatedSkill: "mcp.skill::au-mcp-sdk*"
+  relatedAutomation?: wks.automation*
+  relatedSignals?: wks.signal*[]
+body:
+  - section: Job
+  - section: Process
+  - section: Output
+  - section: Guardrails

@@ -1,0 +1,13 @@
+#: An MCP or native integration on the piloted account.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  slug: String
+  kind: [mcp, native, composio, oauth]
+  connected: [yes, no, error]
+  toolCount?: Number{integer}
+  scopes?: String[]
+  #: Who must complete auth: user or operator.
+  authOwner: String
+  #: Verbatim error or blocker, when connected is no or error.
+  blockerNote?: String
+  evidence?: wks.evidence&[]

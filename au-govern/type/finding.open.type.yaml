@@ -1,0 +1,3 @@
+#: A verified finding awaiting repair or a human ruling.
+#: Query finding.open for pending findings.
+extends: finding

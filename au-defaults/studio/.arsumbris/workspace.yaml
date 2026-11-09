@@ -1,0 +1,7 @@
+type: au.engine.workspace::au-engine
+edit:
+  - studio
+discover:
+  - host-bundle
+  - mcp-bundle
+  - au-mcp-adapter-codex

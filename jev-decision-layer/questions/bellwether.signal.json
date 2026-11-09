@@ -1,0 +1,72 @@
+{
+  "$id": "bellwether.signal",
+  "version": "1.0.0",
+  "applies_to": "bellwether/signals/<market-id>.json — pre-dial gate and post-call signal scoring",
+  "purpose": "Gate whether a market may be worked by phone at all, and score the specificity of what a desk actually said. It never replaces the call and never supplies the posterior.",
+  "state_shape": {
+    "note": "Send the resolution clause plus the confirmation text only. No prospect identities, no unrelated market data.",
+    "fields": ["market_question", "resolution_clause", "source_of_truth_description", "prior_posterior", "confirmation_statement", "speaker_role", "call_outcome"]
+  },
+  "gates": {
+    "note": "All four must clear before dialing. A failed gate marks the market untradeable, not 'needs review'.",
+    "answerable_from_public_record": {
+      "type": "noul", "direction": "at_least", "threshold": 0.90,
+      "instructions": "Can the fact this market resolves on be obtained by any member of the public, by asking the institution named in the resolution clause, without any special access, confidentiality or embargo?"
+    },
+    "requires_nonpublic_or_embargoed_info": {
+      "type": "noul", "direction": "at_most", "threshold": 0.10,
+      "instructions": "Would answering this question require the person answering to reveal non-public, embargoed, confidential or privileged information that they owe a duty not to disclose?"
+    },
+    "we_could_influence_outcome": {
+      "type": "noul", "direction": "at_most", "threshold": 0.10,
+      "instructions": "Could anyone acting for this desk, or anyone reading our published materials, plausibly change the outcome this market resolves on?"
+    },
+    "resolution_source_has_public_desk": {
+      "type": "noul", "direction": "at_least", "threshold": 0.85,
+      "instructions": "Does the source of truth named in the resolution clause operate a public-facing desk that answers calls from the general public — a clerk's office, press office, public information officer, box office, permits counter, registry or league communications line?"
+    },
+    "clause_is_ambiguous": {
+      "type": "noul", "direction": "at_most", "threshold": 0.10,
+      "instructions": "Is the resolution clause vague about which source decides the outcome, for example 'as widely reported' or an unnamed body of coverage?"
+    }
+  },
+  "questions": {
+    "statement_specificity": {
+      "type": "score", "weight": 0.6, "max_points": 5,
+      "instructions": "How specific, checkable and attributable is what the desk said on the call? Judge the statement alone, not whether it is favourable to our position.",
+      "criteria": [
+        "No usable statement: a refusal, a deflection, or silence",
+        "Impression only: the caller's paraphrase of a general attitude, with no facts",
+        "Partial fact: a fact without a date, a document name, or a role identified as its source",
+        "Fact with source role: a specific fact plus the role of the person who stated it",
+        "Verbally quotable fact plus publish timing: the specific fact, the source's role, and when it becomes public or official"
+      ]
+    },
+    "source_authority": {
+      "type": "score", "weight": 0.4, "max_points": 5,
+      "instructions": "How authoritative is the speaker for the fact in question, given the desk they work at?",
+      "criteria": [
+        "Unknown person at an unrelated desk",
+        "Routed to someone at the right institution but not responsible for the record",
+        "Front desk or generalist who would not be expected to know",
+        "Staff member whose job includes the record in question",
+        "The office or role that owns publishing the record"
+      ]
+    }
+  },
+  "composition": {
+    "formula": "signal_quality = 0.6*statement_specificity + 0.4*source_authority, on a 0-5 scale",
+    "usage": "Advisory only. signal_quality < 3.0 means corroborate with a second desk before trading; it never sets the posterior.",
+    "posterior_rule": "The posterior must be pre-registered in the signal record before dialing. Jev may not produce or revise it. If Jev's advisory quality and the desk's own confidence disagree by more than the trade-desk threshold, escalate to a human rather than trading."
+  },
+  "routing": {
+    "dial_allowed": "all gates cleared",
+    "trade_allowed": "all gates cleared AND on-record confirmation obtained AND compliance checks clean AND primary-source confirmation exists",
+    "min_confidence_for_trade": 0.9,
+    "human_review_band": "any gate noul inside 0.4-0.6, or signal_quality between 2.5 and 3.0, or rank abstention"
+  },
+  "known_failures": [
+    {"case": "A polite, friendly desk conversation scored as high specificity despite carrying no checkable fact", "fix": "Level 4 requires a specific fact plus a source role; level 3 is a fact without attribution"}
+  ],
+  "authoring_rules": "See jev/DECISION-LAYER.md D1. This set is a gate and an advisory quality score; the compliance layer in bellwether/compliance/ remains authoritative and is never model-decided."
+}

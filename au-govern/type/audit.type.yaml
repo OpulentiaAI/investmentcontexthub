@@ -1,0 +1,19 @@
+#: A rerunnable check of one semantic invariant the engine cannot validate.
+#: The title states the invariant.
+#: The body explains the healthy case and how to detect a violation.
+#: The calling workflow records findings and routes repairs.
+#:
+#: Create an audit for recurring catches or a researched requirement.
+#: Name its doctrine, a meaningful failing case and the caller that runs it.
+#: A preventive claim also needs a controlled boundary that uses the result.
+#: Declaring an audit does not schedule or enforce it.
+fields:
+  #: What the audit checks and when a caller should select it.
+  tldr: String
+  #: The doctrine behind the invariant.
+  #: References alone do not establish that the recipe checks it adequately.
+  checks: any*[+]
+  #: Type definitions identifying the subjects to which the audit applies.
+  #: Absent scope makes it applicable across the graph.
+  #: The caller selects concrete subjects and runs the check.
+  scope?: type*[]

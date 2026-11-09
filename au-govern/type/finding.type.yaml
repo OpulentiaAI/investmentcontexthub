@@ -1,0 +1,25 @@
+#: A verified semantic defect in one subject.
+#: Claim one lifecycle leaf.
+#: Move an open finding to a terminal leaf after a repair or human ruling.
+#: Never delete or reopen a finding.
+#: Record a regression as a new finding.
+#: The engine checks compatible claims, not transition history.
+#:
+#: Explain the defect and why it violates the doctrine.
+#: Keep supporting evidence in the body.
+sealed:
+  - finding.open
+  - finding.resolved
+  - finding.accepted
+  - finding.dismissed
+fields:
+  #: A short summary of the defect for retrieval.
+  tldr: String
+  #: The doctrine the subject violates.
+  #: An unresolved reference does not establish a justified finding.
+  breaks: any*[+]
+  #: The node with the defect.
+  subject: any*
+  #: The audit that exposed the defect.
+  #: Omit for a direct reader catch.
+  caught_by?: audit*

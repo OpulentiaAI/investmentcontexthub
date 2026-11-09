@@ -1,0 +1,18 @@
+#: Defines the field's purpose and explicit exclusions.
+#: One research premise steers each field, separately from its computed map.
+#: The research-premise skill establishes its scope using existing authorization or human review.
+fields:
+  #: The field's purpose in one line for retrieval and the computed map.
+  tldr: String
+body:
+  - section: Intent
+    guidance: >-
+      State what the field investigates and why it exists.
+      Questions must serve this intent.
+      Follow consumer writing guidance.
+  - section: Out-of-scope
+    guidance: >-
+      State testable exclusions that mediation can apply to candidate questions.
+      Concrete implementation and proposals belong downstream.
+      Follow consumer writing guidance.
+      The engine checks section structure, not semantic scope.

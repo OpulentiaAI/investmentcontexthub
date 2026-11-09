@@ -1,0 +1,9 @@
+#: One stage of a pipeline. Inline value, not its own page.
+extends: [idea::au-base-types]
+fields:
+  order: Number{integer}
+  entryCriteria: String
+  exitCriteria: String
+  ownerRole: String
+  #: Placeholder until real medians come from the mailbox extraction.
+  slaDays?: Number{integer}

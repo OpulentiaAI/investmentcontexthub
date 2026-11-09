@@ -1,0 +1,9 @@
+#: A finding repaired and checked against the doctrine it violated.
+#: Keep the observed check result as evidence in the body.
+#: A missing resolution produces a diagnostic.
+#: It does not establish that the repair worked.
+extends: finding
+fields:
+  #: The repair performed.
+  #: The body holds its supporting check and result.
+  resolution: String

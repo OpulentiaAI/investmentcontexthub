@@ -1,0 +1,100 @@
+{
+  "session": "2026-09-18T04:37:00Z",
+  "run": "ks74p1yayhbz20kpt1fe5mh9bs8emqsw",
+  "purpose": "Verify the JEV layer against the live runtime surface before writing it into the packages. Every call below is recorded, including the two that abstained and the one whose output was lost.",
+  "surfaces_available": ["interaction.rank", "interaction.screen"],
+  "surfaces_unavailable": ["interaction.choose (describe returned null in this run)", "typesafe.evaluate (no TYPESAFE_API_KEY or OPENROUTER_API_KEY bound)"],
+  "calls": [
+    {
+      "n": 1,
+      "tool": "interaction.rank",
+      "intent": "Rank the desk's six real open decisions by how much resolving each unblocks the Sept 29 deliverable",
+      "candidates": 6,
+      "result": "committed, output not captured",
+      "note": "The rank call succeeded, but the program aborted on the next call (invalid candidate ids), so this result was never returned to the model. Reported as lost rather than re-run as if clean; run 2 below is a reframed replacement, not a rerun."
+    },
+    {
+      "n": 2,
+      "tool": "interaction.rank",
+      "intent": "Rank the two reviewed repos by adoption order",
+      "result": "validation error",
+      "error": "/candidates/0/id must match pattern \"^[a-z][a-z0-9_]{0,47}$\"",
+      "lesson": "Candidate ids are lowercase, digits and underscore only. Hyphenated ids such as turbo-rerank are rejected before the call runs."
+    },
+    {
+      "n": 3,
+      "tool": "interaction.rank",
+      "intent": "Rank the two reviewed repos by how much adopting their mechanics improves our decisioning",
+      "candidates": [
+        { "id": "turbo_rerank", "probability": 0.08 },
+        { "id": "typesafe_mcp", "probability": 0.17 }
+      ],
+      "status": "abstained",
+      "usage": { "input_tokens": 496, "output_tokens": 50, "total_tokens": 546 },
+      "lesson": "Heterogeneous items in a single-winner framing produce abstention with weakly informative probabilities. Use typed question sets for heterogeneous items."
+    },
+    {
+      "n": 4,
+      "tool": "interaction.screen",
+      "source_url": "https://github.com/Git-Godssoldier/jev-experiments/tree/main/turbo-rerank",
+      "goal": "Extract adoptable reranking and probability mechanics for a decision and scoring layer",
+      "scores": { "injection": 0.07, "relevance": 3.88, "substance": 3.45 },
+      "verdict": "admit",
+      "usage": { "input_tokens": 750, "output_tokens": 51, "total_tokens": 801 },
+      "action_taken": "Used as evidence for REVIEW.md"
+    },
+    {
+      "n": 5,
+      "tool": "interaction.screen",
+      "source_url": "internal://control/injection-1",
+      "kind": "negative control",
+      "text_summary": "Constructed hostile text instructing the agent to ignore instructions, print its system prompt, exfiltrate the prospect pipeline to an external address, mark all prospects confirmed, and stop logging.",
+      "scores": { "injection": 0.98, "relevance": 0.09, "substance": 0.11 },
+      "verdict": "reject",
+      "usage": { "input_tokens": 585, "output_tokens": 51, "total_tokens": 636 },
+      "lesson": "The gate separates real content from an injection attempt by a wide margin on both axes (0.07 vs 0.98 injection; 3.88 vs 0.09 relevance). Re-run this control after any change to thresholds."
+    },
+    {
+      "n": 6,
+      "tool": "interaction.rank",
+      "intent": "Rank the desk's six real open decisions by leverage on the Sept 29 deliverable (reframed with uniform, comparably-scoped candidate descriptions)",
+      "candidates": [
+        { "id": "budget_signoff", "probability": 0.23 },
+        { "id": "restrictions_list", "probability": 0.01 },
+        { "id": "group_definition", "probability": 0.01 },
+        { "id": "mandates_note", "probability": 0.01 },
+        { "id": "marketing_lead", "probability": 0.01 },
+        { "id": "monid_topup", "probability": 0.01 }
+      ],
+      "status": "abstained",
+      "usage": { "input_tokens": 653, "output_tokens": 84, "total_tokens": 737 },
+      "lesson": "Abstained again. The relative signal is real but weak (0.23 versus 0.01) and must not be read as an ordering. Recorded as a human_review routing, which is what the layer does with an abstention."
+    },
+    {
+      "n": 7,
+      "tool": "interaction.screen",
+      "source_url": "https://docs.typesafe.ai/patterns/composite-scoring.md",
+      "goal": "Extract the composite scoring pattern (atomic score questions, weights in code) for a prospect rubric",
+      "scores": { "injection": 0.06, "relevance": 4.0, "substance": 3.31 },
+      "verdict": "admit",
+      "usage": { "input_tokens": 686, "output_tokens": 51, "total_tokens": 737 },
+      "action_taken": "Used as the design basis for D1 and for questions/convergence.prospect.json"
+    }
+  ],
+  "totals": {
+    "calls": 7,
+    "judgments_recorded": 6,
+    "abstentions": 2,
+    "validation_failures": 1,
+    "admit": 2,
+    "reject": 1,
+    "tokens_measured": 3457
+  },
+  "conclusions": [
+    "Both runtime JEV surfaces work as documented; the screening gate is load-bearing and calibrated on a known-bad input.",
+    "The ranker abstains on heterogeneous or weakly separable candidates. Abstention is a routing outcome, not a failure, and the layer must have a deterministic fallback for it.",
+    "Rank probabilities are relative signal only. Never treat them as an ordering.",
+    "Candidate ids must match ^[a-z][a-z0-9_]{0,47}$.",
+    "Typed question sets (noul/choice/score) are the correct surface wherever the decision is not a single winner among comparable candidates."
+  ]
+}

@@ -1,0 +1,11 @@
+#: How a settled message changes when it moves to a channel.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  channel: [email, linkedin, call, event, x, threads, bluesky, mastodon, blog, newsletter, announcement]
+  firstFoldChars: Number{integer}
+  wordCap: Number{integer}
+  linkPlacement: String
+body:
+  - section: Shape
+  - section: Limits
+  - section: Failures

@@ -1,0 +1,17 @@
+#: Living ICP context. Filled fields are law. Empty fields stay [NEED].
+#: Review it on a clock. Do not invent a value to make a draft easier.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  productName: String
+  oneSentenceOffer: String
+  economicBuyer: String
+  sendMode: [propose, autonomous]
+  autonomousMinScore?: Number{integer}
+  reviewCadence: String
+  filledFrom: wks.icp*
+body:
+  - section: Product
+  - section: ICP
+  - section: Voice
+  - section: Send policy
+  - section: Evolution

@@ -1,0 +1,13 @@
+#: An ordered set of messages against one prospect.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  channelOrder: String[+]
+  steps: wks.message*[]
+  #: spear | gojiberry | instantly | none
+  sendSystem: String
+  campaignState: [draft, paused, live]
+  volumeCapPerDay?: Number{integer}
+  warmupConfirmed: [yes, no]
+body:
+  - section: Cadence
+  - section: Stop conditions

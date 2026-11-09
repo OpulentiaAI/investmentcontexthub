@@ -1,0 +1,14 @@
+# Development records and research remain on disk outside the capability graph.
+operations/
+agent-inbox/
+memory/
+eidos/
+
+# Local development configuration.
+.eidos-config.yaml
+.gitignore
+
+# Generated filesystem and Python cache files.
+.DS_Store
+__pycache__/
+*.pyc

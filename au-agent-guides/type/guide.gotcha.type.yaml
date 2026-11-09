@@ -1,0 +1,13 @@
+#: A plausible mistaken assumption, its consequence, and a supported correction.
+#: The optional sections provide a starting structure; authors may use other sections.
+#: Explain the applicability of the correction instead of replacing one absolute with another.
+extends: guide
+body:
+  - section?: The gotcha
+    guidance: "Name the mistaken assumption and a concrete situation in which it fails."
+  - section?: The fix
+    guidance: "Give the correction and the conditions in which it works."
+  - section?: Why
+    guidance: "Explain the mechanism or tradeoff the reader needs to understand the correction."
+  - section?: To check
+    guidance: "Choose an observation that distinguishes the mistaken assumption from the supported behavior."

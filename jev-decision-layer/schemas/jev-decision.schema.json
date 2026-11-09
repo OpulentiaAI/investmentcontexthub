@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "JEV decision record",
+  "description": "One decision made through the JEV layer: what was asked, what came back with probabilities, how code composed it, what was routed, and — later — what actually happened. D3 calibration reads these records.",
+  "type": "object",
+  "required": ["decision_id", "decided_at", "decision_point", "surface", "question_set", "state_ref", "answers", "routing"],
+  "properties": {
+    "decision_id": { "type": "string" },
+    "decided_at": { "type": "string", "format": "date-time" },
+    "decision_point": { "type": "string", "enum": ["D0_gate", "D1_score", "D2_route", "D3_verify"] },
+    "surface": {
+      "type": "string",
+      "enum": ["interaction.rank", "interaction.screen", "typesafe.evaluate"],
+      "description": "Which JEV surface produced the judgment. rank/screen are the runtime tools; typesafe.evaluate is the MCP/HTTP path when a key exists."
+    },
+    "question_set": {
+      "type": "object",
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" }
+      }
+    },
+    "state_ref": {
+      "type": "object",
+      "description": "Pointer to the state that was judged, never the whole state inline.",
+      "properties": {
+        "kind": { "type": "string", "enum": ["file", "row", "url", "inline_hash"] },
+        "path": { "type": "string" },
+        "row_key": { "type": "string" },
+        "url": { "type": "string" },
+        "sha256": { "type": "string" },
+        "filtered_fields": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "type"],
+        "properties": {
+          "question_id": { "type": "string" },
+          "type": { "type": "string", "enum": ["noul", "choice", "score", "screen"] },
+          "value": { "description": "noul: probability yes. choice: selected option id. score: position on the level scale. screen: verdict." },
+          "probabilities": { "type": "object", "description": "Per-option (choice) or per-level (score) distribution.", "additionalProperties": { "type": "number" } },
+          "confidence": { "type": ["number", "null"], "description": "Absent for noul by design." },
+          "legend": { "type": "array", "items": { "type": "string" } },
+          "expected_points": { "type": ["number", "null"], "description": "sum(p * level_points) or sum(p * option_points). Threshold use only, never interpolated into a magnitude." },
+          "gate_result": { "type": ["string", "null"], "enum": ["passed", "failed", "human_review", null] },
+          "threshold": { "type": ["number", "null"] },
+          "direction": { "type": ["string", "null"], "enum": ["at_least", "at_most", null] }
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "description": "Arithmetic performed in code with published weights.",
+      "properties": {
+        "formula": { "type": "string" },
+        "components": { "type": "object", "additionalProperties": { "type": "number" } },
+        "weights": { "type": "object", "additionalProperties": { "type": "number" } },
+        "result": { "type": "number" },
+        "sector_or_policy_adjustment": { "type": ["number", "null"] },
+        "final": { "type": "number" },
+        "agreement_with_deterministic": {
+          "type": ["string", "null"],
+          "enum": ["agree", "disagree_over_10pts", "not_comparable", null]
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "required": ["outcome"],
+      "properties": {
+        "outcome": { "type": "string", "enum": ["auto", "human_review", "abstained", "refused_by_gate", "degraded_no_jev"] },
+        "action": { "type": "string", "description": "What code did as a result: the concrete next step, not an intention." },
+        "threshold_applied": { "type": "number" },
+        "confidence_gate": { "type": "number" },
+        "reason": { "type": "string" }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "input_tokens": { "type": "number" },
+        "output_tokens": { "type": "number" },
+        "latency_ms": { "type": "number" },
+        "requests": { "type": "number", "description": "Must be 1 per state unless batching was deliberately split." }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "description": "Filled in later by D3. Absent means the decision is unresolved, not that it was correct.",
+      "properties": {
+        "resolved_at": { "type": "string", "format": "date-time" },
+        "realized": { },
+        "brier_by_question": { "type": "object", "additionalProperties": { "type": "number" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "known_failure_hit": { "type": ["string", "null"], "description": "Which entry of the question set's known_failures this decision exhibited, if any." }
+  }
+}

@@ -1,0 +1,6 @@
+#: A durable concept or best practice woven from captures and claims.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  facetOf?: String
+  evidenceKind?: [stated, observed, inferred, reported]
+  groundedIn?: String

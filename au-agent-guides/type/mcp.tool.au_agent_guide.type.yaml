@@ -1,0 +1,22 @@
+#: Serve native file guides discovered across the mounted workspace.
+#: Fields are the call input; metadata locates the implementation and scopes its broker.
+#: The definition name follows the loader's mcp.tool.<name> discovery convention.
+extends: mcp.tool::au-mcp-sdk
+fields:
+  #: Filename stem, optionally qualified as name::package. Omit both selectors to list guides.
+  #: Use path when the same stem occurs more than once within one package.
+  name?: String
+  #: Exact absolute source path from the index. Must identify an indexed guide.
+  #: Mutually exclusive with name; this tool does not read arbitrary paths.
+  path?: String
+meta:
+  - type: plugin-runtime-meta::au-mcp-sdk
+    entry: ./au-agent-guide.mjs
+    contractVersion: 0
+  - type: tool-presentation-meta::au-mcp-sdk
+    description: 'Find practical guidance for authoring in Ars Umbris. {} lists mounted file guides with resolved goal, rule, about, type claims, and source paths. {name: "modeling-discrete-states"} returns the complete source with its origin. Qualify as name::package for cross-package collisions; use {path: "<indexed absolute path>"} for an exact selection. Supply only one selector.'
+    guidance: 'When an Ars Umbris design or authoring choice would benefit from guidance, list the guides and read those relevant to the task. Follow examples from the returned source origin and check the owning contract and implementation for the behavior you rely on. Packages can contribute guide::au-agent-guides instances through the same tool. Give each guide a useful decision, as a-guide-earns-its-slot explains.'
+  - type: tool-access-meta::au-mcp-sdk
+    broker: read
+# No serves-files-meta: a package-relative filename template cannot represent this
+# cross-package, nested-path selection. Use read_file on the source for a read prerequisite.

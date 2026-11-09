@@ -1,0 +1,10 @@
+#: Investment mandate for a paper/research fund.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  name: String
+  capitalUsd?: Number{>=0}
+  universe?: String[]
+  strategies?: String[]
+  riskLimits?: String[]
+  cadence?: String
+  benchmark?: String

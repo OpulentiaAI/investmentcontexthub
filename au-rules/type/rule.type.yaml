@@ -1,0 +1,14 @@
+#: A rule is one atom of the always-on discipline floor.
+#: It is a plain typed note, not an inject. a rule-profile carries it, injected at depth 1, so a rule is always-on through a profile, never an inject on its own.
+#: name is the stable slug. description is the rule in one line, the compressed rule and the label a picker shows.
+#: Author to the craft.
+#: One move. The title IS the move.
+#: State what stands, not what changes.
+#: Hold only the judgment a type or a skill cannot.
+#: Keep a rule only where it changes what the agent does.
+#: Close on a "To check, ..." self-test where a runnable check fits.
+#: Name a mechanism in backticks, not a body wikilink, since the profile injects the rule body alone and never follows it.
+#: The overridable writing voice is its own package now, au-writing-style.
+fields:
+  name: String
+  description: String

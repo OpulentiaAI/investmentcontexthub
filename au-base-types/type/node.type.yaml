@@ -1,0 +1,6 @@
+#: The abstract root of the base vocabulary, carrying a shared summary.
+#: Concrete kinds extend node and inherit its required tldr field.
+abstract: true
+fields:
+  #: A one-line summary for finding and recognizing the node.
+  tldr: String

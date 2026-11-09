@@ -1,0 +1,933 @@
+{
+  "schema_version": 1,
+  "source_url": "https://opulent-cloud.vercel.app/use-cases/",
+  "retrieved_at": "2026-08-05T22:52:25+00:00",
+  "source_last_modified": "Wed, 05 Aug 2026 22:52:25 GMT",
+  "source_etag": "\"31fd937e8ccdd397f1af72eb5831c985\"",
+  "source_sha256": "bfd068b67c77c59e1b234b720c5bca3d15c5fba79acf06e86f8c88e5fc096590",
+  "count": 44,
+  "classification_method": "Observed fields are extracted from the live index; GTM fields are deterministic editorial labels defined in this script.",
+  "counts": {
+    "site_categories": {
+      "GTM Engineering": 8,
+      "Finance Operations": 5,
+      "Data & Analytics": 5,
+      "Automations": 7,
+      "Incident Response": 3,
+      "Migrations": 3,
+      "Feature Development": 4,
+      "Project Management": 3,
+      "Code Quality": 3,
+      "Opulent Optimization": 3
+    },
+    "portfolio_roles": {
+      "Primary wedge": 16,
+      "Expansion module": 13,
+      "Proof accelerator": 9,
+      "Partner wedge": 2,
+      "Enablement asset": 4
+    },
+    "featured": 13
+  },
+  "use_cases": [
+    {
+      "ordinal": 1,
+      "slug": "deal-sourcing-as-a-self-driving-crm",
+      "url": "https://opulent-cloud.vercel.app/use-cases/deal-sourcing-as-a-self-driving-crm/",
+      "title": "Deal Sourcing as a Self-Driving CRM",
+      "summary": "Opulent finds, scores, and moves acquisition targets through the pipeline while the CRM stays the system of record, with verification gates and one-step handoff.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": true,
+        "capability_tags": [
+          "Integrations",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Discover",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 2,
+      "slug": "event-prospecting",
+      "url": "https://opulent-cloud.vercel.app/use-cases/event-prospecting/",
+      "title": "Event Prospecting",
+      "summary": "Turn an event page into a ranked, person-first pipeline map with company fit, speaker context, outreach hooks, proof links, and CRM-ready handoff.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Discover",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 3,
+      "slug": "background-account-triage",
+      "url": "https://opulent-cloud.vercel.app/use-cases/background-account-triage/",
+      "title": "Background Account Triage",
+      "summary": "Opulent continuously researches accounts in the background, turns weak public context into scored evidence, and surfaces the right companies for deeper sales diligence.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Schedules"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Qualify",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 4,
+      "slug": "self-evolving-pipeline-operations",
+      "url": "https://opulent-cloud.vercel.app/use-cases/self-evolving-pipeline-operations/",
+      "title": "Self-Evolving Pipeline Operations",
+      "summary": "Sales playbooks become agent-run pipeline ops: weekly reviews, stuck-stage audits, forecast hygiene, and CRM data quality, each cycle writing the next improvement.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": true,
+        "capability_tags": [
+          "Playbooks",
+          "Schedules"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Optimize",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 5,
+      "slug": "stand-up-a-crm-and-outreach-pipeline-in-one-run",
+      "url": "https://opulent-cloud.vercel.app/use-cases/stand-up-a-crm-and-outreach-pipeline-in-one-run/",
+      "title": "Stand Up a CRM and Outreach Pipeline in One Run",
+      "summary": "Company discovery, enrichment, dedup checks, tasks, and linked records, verified after every write, with a completion packet showing what changed and what needs human judgment.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Convert",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 6,
+      "slug": "relationship-intelligence-for-the-warm-intro",
+      "url": "https://opulent-cloud.vercel.app/use-cases/relationship-intelligence-for-the-warm-intro/",
+      "title": "Relationship Intelligence for the Warm Intro",
+      "summary": "Build a relationship graph across CRM, email, calendar, and prior deals; score intro paths, draft the ask, route it to the right human, and write outcomes back to memory.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Engage",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 7,
+      "slug": "opulent-x-clodo-people-search-into-reviewed-pipelines",
+      "url": "https://opulent-cloud.vercel.app/use-cases/opulent-x-clodo-people-search-into-reviewed-pipelines/",
+      "title": "Opulent x Clodo: People Search into Reviewed Pipelines",
+      "summary": "Exact-persona search wrapped into reusable workflows for expert sourcing, recruiting, research verification, and precision GTM.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Discover",
+        "portfolio_role": "Partner wedge"
+      }
+    },
+    {
+      "ordinal": 8,
+      "slug": "competitor-landscape-into-living-battlecards",
+      "url": "https://opulent-cloud.vercel.app/use-cases/competitor-landscape-into-living-battlecards/",
+      "title": "Competitor Landscape into Living Battlecards",
+      "summary": "Seed Opulent with your company and known rivals; it maps the market, researches each competitor in depth, and keeps battlecards and positioning insights current on a schedule.",
+      "observed": {
+        "site_category": "GTM Engineering",
+        "featured": false,
+        "capability_tags": [
+          "Schedules"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Revenue and growth",
+        "value_motion": "Revenue growth",
+        "lifecycle_stage": "Enable",
+        "portfolio_role": "Enablement asset"
+      }
+    },
+    {
+      "ordinal": 9,
+      "slug": "procurement-as-a-governed-agent-run",
+      "url": "https://opulent-cloud.vercel.app/use-cases/procurement-as-a-governed-agent-run/",
+      "title": "Procurement as a Governed Agent Run",
+      "summary": "Purchasing, intercompany billing, three-way match, dispute clearing, and settlement run end to end, with ERP and treasury links instead of manual handoffs.",
+      "observed": {
+        "site_category": "Finance Operations",
+        "featured": true,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Finance and operations",
+        "value_motion": "Operating efficiency",
+        "lifecycle_stage": "Operate",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 10,
+      "slug": "order-and-invoice-work-as-one-reconciled-loop",
+      "url": "https://opulent-cloud.vercel.app/use-cases/order-and-invoice-work-as-one-reconciled-loop/",
+      "title": "Order and Invoice Work as One Reconciled Loop",
+      "summary": "Orders, warranty claims, and shipping documents come in, get validated, and reconcile against the ERP, with human escalation on exceptions.",
+      "observed": {
+        "site_category": "Finance Operations",
+        "featured": false,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Finance and operations",
+        "value_motion": "Operating efficiency",
+        "lifecycle_stage": "Operate",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 11,
+      "slug": "live-sap-simulation-before-consultants-finish-discovery",
+      "url": "https://opulent-cloud.vercel.app/use-cases/live-sap-simulation-before-consultants-finish-discovery/",
+      "title": "Live SAP Simulation Before Consultants Finish Discovery",
+      "summary": "Stand up a buyer-specific SAP simulation and automate solution delivery, with proof through reliability runs, failure cases, automated repair, and audit evidence.",
+      "observed": {
+        "site_category": "Finance Operations",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Finance and operations",
+        "value_motion": "Operating efficiency",
+        "lifecycle_stage": "Deliver",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 12,
+      "slug": "opulent-x-ramp-controllable-autonomous-finance",
+      "url": "https://opulent-cloud.vercel.app/use-cases/opulent-x-ramp-controllable-autonomous-finance/",
+      "title": "Opulent x Ramp: Controllable Autonomous Finance",
+      "summary": "Governed cards, transfers, spend limits, and approvals become finance runs that buy, reconcile, code, report, and escalate exceptions.",
+      "observed": {
+        "site_category": "Finance Operations",
+        "featured": true,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Finance and operations",
+        "value_motion": "Operating efficiency",
+        "lifecycle_stage": "Operate",
+        "portfolio_role": "Partner wedge"
+      }
+    },
+    {
+      "ordinal": 13,
+      "slug": "forecast-cash-flow-to-the-liquidity-low-point",
+      "url": "https://opulent-cloud.vercel.app/use-cases/forecast-cash-flow-to-the-liquidity-low-point/",
+      "title": "Forecast Cash Flow to the Liquidity Low Point",
+      "summary": "Hand Opulent statements and assumptions; get back an editable forecast workbook that pinpoints the liquidity low point, with every formula inspectable.",
+      "observed": {
+        "site_category": "Finance Operations",
+        "featured": false,
+        "capability_tags": [
+          "Skills"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Finance and operations",
+        "value_motion": "Operating efficiency",
+        "lifecycle_stage": "Plan",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 14,
+      "slug": "data-analysis-as-an-agent-run-workflow",
+      "url": "https://opulent-cloud.vercel.app/use-cases/data-analysis-as-an-agent-run-workflow/",
+      "title": "Data Analysis as an Agent-Run Workflow",
+      "summary": "Opulent turns messy questions into sourced analysis, executable work, and reusable decision records, with an evidence trail and a business readout.",
+      "observed": {
+        "site_category": "Data & Analytics",
+        "featured": true,
+        "capability_tags": [
+          "Skills"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Data and analytics",
+        "value_motion": "Decision intelligence",
+        "lifecycle_stage": "Decide",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 15,
+      "slug": "reason-over-entire-datasets-with-async-spawns",
+      "url": "https://opulent-cloud.vercel.app/use-cases/reason-over-entire-datasets-with-async-spawns/",
+      "title": "Reason Over Entire Datasets with Async Spawns",
+      "summary": "Plan the selection, spawn deep work in parallel, review focused intervals, and return evidence with reusable outputs.",
+      "observed": {
+        "site_category": "Data & Analytics",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Data and analytics",
+        "value_motion": "Decision intelligence",
+        "lifecycle_stage": "Decide",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 16,
+      "slug": "ad-hoc-data-queries-in-slack",
+      "url": "https://opulent-cloud.vercel.app/use-cases/ad-hoc-data-queries-in-slack/",
+      "title": "Ad-Hoc Data Queries in Slack",
+      "summary": "Use a Slack slash command to query your database in plain English.",
+      "observed": {
+        "site_category": "Data & Analytics",
+        "featured": false,
+        "capability_tags": [
+          "Integrations",
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Data and analytics",
+        "value_motion": "Decision intelligence",
+        "lifecycle_stage": "Decide",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 17,
+      "slug": "customer-health-summaries-in-slack",
+      "url": "https://opulent-cloud.vercel.app/use-cases/customer-health-summaries-in-slack/",
+      "title": "Customer Health Summaries in Slack",
+      "summary": "Use a playbook to pull customer account metrics from your database into Slack.",
+      "observed": {
+        "site_category": "Data & Analytics",
+        "featured": false,
+        "capability_tags": [
+          "Integrations",
+          "Playbooks",
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Data and analytics",
+        "value_motion": "Decision intelligence",
+        "lifecycle_stage": "Retain",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 18,
+      "slug": "anomaly-detection-across-connected-data",
+      "url": "https://opulent-cloud.vercel.app/use-cases/anomaly-detection-across-connected-data/",
+      "title": "Anomaly Detection Across Connected Data",
+      "summary": "Opulent investigates metric drops, compares periods, and correlates events across data sources to find the root cause, with the SQL and charts attached.",
+      "observed": {
+        "site_category": "Data & Analytics",
+        "featured": false,
+        "capability_tags": [
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Data and analytics",
+        "value_motion": "Decision intelligence",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 19,
+      "slug": "antifragile-deployments",
+      "url": "https://opulent-cloud.vercel.app/use-cases/antifragile-deployments/",
+      "title": "Antifragile Deployments",
+      "summary": "Use production signals to deploy agents, verify them, and improve memory, runbooks, evals, and tool rules with every release.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "Schedules"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 20,
+      "slug": "autonomous-triage-for-knowledge-work-queues",
+      "url": "https://opulent-cloud.vercel.app/use-cases/autonomous-triage-for-knowledge-work-queues/",
+      "title": "Autonomous Triage for Knowledge Work Queues",
+      "summary": "Monitor inboxes, forms, chat channels, and ticket queues; filter noise, deduplicate, rank urgency, and route work to the right owner or agent run.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "Schedules",
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Operate",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 21,
+      "slug": "daily-sentry-error-fixes",
+      "url": "https://opulent-cloud.vercel.app/use-cases/daily-sentry-error-fixes/",
+      "title": "Daily Sentry Error Fixes",
+      "summary": "Recurring session that pulls new Sentry errors overnight and opens fix PRs by morning.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": true,
+        "capability_tags": [
+          "Schedules",
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 22,
+      "slug": "auto-fix-failing-ci-builds",
+      "url": "https://opulent-cloud.vercel.app/use-cases/auto-fix-failing-ci-builds/",
+      "title": "Auto-Fix Failing CI Builds",
+      "summary": "Add a CI Action that calls Opulent to fix failing builds on your PRs.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "API"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 23,
+      "slug": "run-nightly-e2e-tests-on-staging",
+      "url": "https://opulent-cloud.vercel.app/use-cases/run-nightly-e2e-tests-on-staging/",
+      "title": "Run Nightly E2E Tests on Staging",
+      "summary": "Schedule Opulent to run your end-to-end test suite against staging every night and file tickets for failures.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "API",
+          "Schedules",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 24,
+      "slug": "fleet-wide-maintenance-across-thousands-of-repositories",
+      "url": "https://opulent-cloud.vercel.app/use-cases/fleet-wide-maintenance-across-thousands-of-repositories/",
+      "title": "Fleet-Wide Maintenance Across Thousands of Repositories",
+      "summary": "Point Opulent at the whole estate: dependency updates, cross-repo refactors, and maintenance PRs batched, verified, and opened across thousands of repositories.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "Schedules",
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Scale",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 25,
+      "slug": "daily-datadog-health-digest",
+      "url": "https://opulent-cloud.vercel.app/use-cases/daily-datadog-health-digest/",
+      "title": "Daily Datadog Health Digest",
+      "summary": "Daily session that scans Datadog for errors and posts a health digest to Slack.",
+      "observed": {
+        "site_category": "Automations",
+        "featured": false,
+        "capability_tags": [
+          "Schedules",
+          "MCP",
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering and operations",
+        "value_motion": "Operating leverage",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 26,
+      "slug": "auto-investigate-datadog-alerts",
+      "url": "https://opulent-cloud.vercel.app/use-cases/auto-investigate-datadog-alerts/",
+      "title": "Auto-Investigate Datadog Alerts",
+      "summary": "Wire PagerDuty or Datadog alerts to Opulent for automatic incident investigation.",
+      "observed": {
+        "site_category": "Incident Response",
+        "featured": true,
+        "capability_tags": [
+          "API",
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Reliability and security",
+        "value_motion": "Risk reduction",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 27,
+      "slug": "auto-generate-incident-postmortems",
+      "url": "https://opulent-cloud.vercel.app/use-cases/auto-generate-incident-postmortems/",
+      "title": "Auto-Generate Incident Postmortems",
+      "summary": "When a PagerDuty incident resolves, Opulent drafts a structured postmortem with timeline, root cause, and action items.",
+      "observed": {
+        "site_category": "Incident Response",
+        "featured": true,
+        "capability_tags": [
+          "API",
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Reliability and security",
+        "value_motion": "Risk reduction",
+        "lifecycle_stage": "Learn",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 28,
+      "slug": "debug-a-bug-report-end-to-end",
+      "url": "https://opulent-cloud.vercel.app/use-cases/debug-a-bug-report-end-to-end/",
+      "title": "Debug a Bug Report End-to-End",
+      "summary": "Hand Opulent a bug report with Datadog logs and database access for root-cause analysis.",
+      "observed": {
+        "site_category": "Incident Response",
+        "featured": false,
+        "capability_tags": [
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Reliability and security",
+        "value_motion": "Risk reduction",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 29,
+      "slug": "migrate-50-files-from-rest-to-graphql",
+      "url": "https://opulent-cloud.vercel.app/use-cases/migrate-50-files-from-rest-to-graphql/",
+      "title": "Migrate 50 Files from REST to GraphQL",
+      "summary": "Scope a 50-file REST-to-GraphQL migration, split it into conflict-free work packages, and run them in parallel.",
+      "observed": {
+        "site_category": "Migrations",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering leadership",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Deliver",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 30,
+      "slug": "create-a-react-18-to-19-upgrade-playbook",
+      "url": "https://opulent-cloud.vercel.app/use-cases/create-a-react-18-to-19-upgrade-playbook/",
+      "title": "Create a React 18 to 19 Upgrade Playbook",
+      "summary": "Turn the official React 19 upgrade guide into a phased playbook mapped to your codebase.",
+      "observed": {
+        "site_category": "Migrations",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering leadership",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Plan",
+        "portfolio_role": "Enablement asset"
+      }
+    },
+    {
+      "ordinal": 31,
+      "slug": "refactor-a-multi-million-line-etl-monolith",
+      "url": "https://opulent-cloud.vercel.app/use-cases/refactor-a-multi-million-line-etl-monolith/",
+      "title": "Refactor a Multi-Million-Line ETL Monolith",
+      "summary": "Delegate data-class migrations across a multi-million-line ETL monolith as parallel, verified work packages. This is the pattern behind order-of-magnitude efficiency gains.",
+      "observed": {
+        "site_category": "Migrations",
+        "featured": true,
+        "capability_tags": [
+          "Advanced Capabilities",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering leadership",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Deliver",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 32,
+      "slug": "implement-bookings-api-from-openapi-spec",
+      "url": "https://opulent-cloud.vercel.app/use-cases/implement-bookings-api-from-openapi-spec/",
+      "title": "Implement Bookings API from OpenAPI Spec",
+      "summary": "Hand Opulent a YAML spec and get fully implemented route handlers, validation, and integration tests that match your existing codebase patterns.",
+      "observed": {
+        "site_category": "Feature Development",
+        "featured": true,
+        "capability_tags": [
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product and engineering",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Deliver",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 33,
+      "slug": "click-test-real-product-flows-with-computer-use",
+      "url": "https://opulent-cloud.vercel.app/use-cases/click-test-real-product-flows-with-computer-use/",
+      "title": "Click-Test Real Product Flows with Computer Use",
+      "summary": "Opulent starts your app, opens it in a real browser, and clicks through login, forms, and checkout, then sends an annotated video recording as proof.",
+      "observed": {
+        "site_category": "Feature Development",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product and engineering",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Validate",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 34,
+      "slug": "figma-to-pixel-perfect-code",
+      "url": "https://opulent-cloud.vercel.app/use-cases/figma-to-pixel-perfect-code/",
+      "title": "Figma to Pixel-Perfect Code",
+      "summary": "Connect the Figma MCP and let Opulent build components from your mockups.",
+      "observed": {
+        "site_category": "Feature Development",
+        "featured": false,
+        "capability_tags": [
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product and engineering",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Deliver",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 35,
+      "slug": "catch-visual-regressions-before-every-pr",
+      "url": "https://opulent-cloud.vercel.app/use-cases/catch-visual-regressions-before-every-pr/",
+      "title": "Catch Visual Regressions Before Every PR",
+      "summary": "A repo skill that makes Opulent screenshot every affected page and flag layout breakage before opening a PR.",
+      "observed": {
+        "site_category": "Feature Development",
+        "featured": false,
+        "capability_tags": [
+          "Skills"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product and engineering",
+        "value_motion": "Delivery acceleration",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 36,
+      "slug": "auto-triage-bugs-via-linear",
+      "url": "https://opulent-cloud.vercel.app/use-cases/auto-triage-bugs-via-linear/",
+      "title": "Auto-Triage Bugs via Linear",
+      "summary": "Opulent auto-investigates bugs the moment a label is applied in Linear.",
+      "observed": {
+        "site_category": "Project Management",
+        "featured": true,
+        "capability_tags": [
+          "Integrations",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product operations",
+        "value_motion": "Planning throughput",
+        "lifecycle_stage": "Qualify",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 37,
+      "slug": "turn-prds-into-sprint-tickets",
+      "url": "https://opulent-cloud.vercel.app/use-cases/turn-prds-into-sprint-tickets/",
+      "title": "Turn PRDs into Sprint Tickets",
+      "summary": "Point Opulent at a Notion PRD and get scoped Linear tickets for each work package.",
+      "observed": {
+        "site_category": "Project Management",
+        "featured": false,
+        "capability_tags": [
+          "MCP"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product operations",
+        "value_motion": "Planning throughput",
+        "lifecycle_stage": "Plan",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 38,
+      "slug": "bulk-plan-your-ticket-backlog",
+      "url": "https://opulent-cloud.vercel.app/use-cases/bulk-plan-your-ticket-backlog/",
+      "title": "Bulk-Plan Your Ticket Backlog",
+      "summary": "Multi-select tickets in Linear and get confidence-scored implementation plans.",
+      "observed": {
+        "site_category": "Project Management",
+        "featured": false,
+        "capability_tags": [
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Product operations",
+        "value_motion": "Planning throughput",
+        "lifecycle_stage": "Plan",
+        "portfolio_role": "Enablement asset"
+      }
+    },
+    {
+      "ordinal": 39,
+      "slug": "add-unit-tests-to-your-payments-service",
+      "url": "https://opulent-cloud.vercel.app/use-cases/add-unit-tests-to-your-payments-service/",
+      "title": "Add Unit Tests to Your Payments Service",
+      "summary": "Build a test-writing playbook for payment processing and cover charge flows, refunds, and webhooks.",
+      "observed": {
+        "site_category": "Code Quality",
+        "featured": true,
+        "capability_tags": [
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering quality and security",
+        "value_motion": "Quality and risk reduction",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 40,
+      "slug": "auto-fix-pr-bugs-before-merge",
+      "url": "https://opulent-cloud.vercel.app/use-cases/auto-fix-pr-bugs-before-merge/",
+      "title": "Auto-Fix PR Bugs Before Merge",
+      "summary": "Opulent reviews every PR for bugs and pushes fixes to the branch automatically.",
+      "observed": {
+        "site_category": "Code Quality",
+        "featured": false,
+        "capability_tags": [
+          "Integrations"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering quality and security",
+        "value_motion": "Quality and risk reduction",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Expansion module"
+      }
+    },
+    {
+      "ordinal": 41,
+      "slug": "security-swarm-fix-vulnerabilities-at-scale",
+      "url": "https://opulent-cloud.vercel.app/use-cases/security-swarm-fix-vulnerabilities-at-scale/",
+      "title": "Security Swarm: Fix Vulnerabilities at Scale",
+      "summary": "Opulent fans an agentic map-reduce across your repositories: it builds a threat model, validates real vulnerabilities, and opens fix PRs with regression evidence.",
+      "observed": {
+        "site_category": "Code Quality",
+        "featured": true,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "Engineering quality and security",
+        "value_motion": "Quality and risk reduction",
+        "lifecycle_stage": "Protect",
+        "portfolio_role": "Primary wedge"
+      }
+    },
+    {
+      "ordinal": 42,
+      "slug": "fix-checkout-latency-with-three-competing-strategies",
+      "url": "https://opulent-cloud.vercel.app/use-cases/fix-checkout-latency-with-three-competing-strategies/",
+      "title": "Fix Checkout Latency with Three Competing Strategies",
+      "summary": "Race 3 parallel sessions against a slow checkout API. Each tries a different optimization, and the best ships.",
+      "observed": {
+        "site_category": "Opulent Optimization",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "AI platform and engineering productivity",
+        "value_motion": "Learning velocity",
+        "lifecycle_stage": "Optimize",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 43,
+      "slug": "test-8-untested-modules-in-one-night",
+      "url": "https://opulent-cloud.vercel.app/use-cases/test-8-untested-modules-in-one-night/",
+      "title": "Test 8 Untested Modules in One Night",
+      "summary": "Launch 8 parallel sessions overnight to write unit tests and open PRs by morning.",
+      "observed": {
+        "site_category": "Opulent Optimization",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities",
+          "Playbooks"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "AI platform and engineering productivity",
+        "value_motion": "Learning velocity",
+        "lifecycle_stage": "Scale",
+        "portfolio_role": "Proof accelerator"
+      }
+    },
+    {
+      "ordinal": 44,
+      "slug": "learn-from-past-runs-to-sharpen-the-next-prompt",
+      "url": "https://opulent-cloud.vercel.app/use-cases/learn-from-past-runs-to-sharpen-the-next-prompt/",
+      "title": "Learn From Past Runs to Sharpen the Next Prompt",
+      "summary": "Opulent examines why a session succeeded or failed, extracts the patterns, and produces revised prompts that avoid dead ends and wasted compute.",
+      "observed": {
+        "site_category": "Opulent Optimization",
+        "featured": false,
+        "capability_tags": [
+          "Advanced Capabilities"
+        ]
+      },
+      "gtm_labels": {
+        "buyer_group": "AI platform and engineering productivity",
+        "value_motion": "Learning velocity",
+        "lifecycle_stage": "Learn",
+        "portfolio_role": "Enablement asset"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Folder-repo identity (au.engine.repo). Mounts the decision layer so its question sets,
+# decision records, and skills resolve inside the workspace graph.
+type: au.engine.repo::au-engine
+name: jev-decision-layer
+remote: https://github.com/OpulentiaAI/jev-decision-layer.git
+description: "the JEV decision layer — probabilistic judgment wired into gate/score/route/verify (D0-D3). Question sets, decision records, calibration dashboard, runbooks, and the jev-analysis skill. The rule — Jev judges; code owns weights, ordering, thresholds and consequences."
+deps:
+  - name: au-base-types
+  - name: au-mcp-sdk

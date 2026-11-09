@@ -1,0 +1,21 @@
+#: Who we sell to, and explicitly who we do not.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  industries?: String[]
+  sizeRange?: String
+  geos?: String[]
+  mustHaveTitles: String[+]
+  niceToHaveTitles?: String[]
+  #: Never contact. Enforced by every automation.
+  disqualifiers: String[+]
+  #: Ranked strongest first.
+  rankedTriggers: wks.signal*[]
+  #: Look like intent, are not.
+  falseTriggers: String[+]
+  voiceDo?: String[]
+  voiceDont?: String[]
+  cta: String
+body:
+  - section: Positioning
+    guidance: "One paragraph a stranger could sell from. No adjective without evidence."
+  - section?: Open Questions

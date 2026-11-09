@@ -1,0 +1,18 @@
+#: A human buyer, contact, or colleague.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  #: Current role title.
+  role?: String
+  #: Where they work now.
+  org?: wks.org*
+  #: Verified address only. Blank beats a guess.
+  email?: String
+  phone?: String
+  linkedin?: String
+  #: Prior titles, newest first.
+  titleHistory?: String[]
+  #: Derived from real reply behaviour, not from a title.
+  relationshipStrength: [cold, aware, warm, active, client]
+  #: Hard block. Honoured by every automation.
+  doNotContact: [yes, no]
+  evidence?: wks.evidence&[]

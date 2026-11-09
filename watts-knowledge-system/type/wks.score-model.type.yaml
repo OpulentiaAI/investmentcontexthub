@@ -1,0 +1,14 @@
+#: How a keeper is scored for first-touch vs nurture.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  scaleMin: Number{integer}
+  scaleMax: Number{integer}
+  firstTouchCut: Number{integer}
+  icpWeight: Number{integer}
+  titleWeight: Number{integer}
+  signalWeight: Number{integer}
+  angleWeight: Number{integer}
+body:
+  - section: Rubric
+  - section: Process
+  - section: Guardrails

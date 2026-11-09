@@ -1,0 +1,11 @@
+#: A captured correction awaiting assessment.
+#: Query correction.open for pending corrections.
+extends: correction
+fields:
+  #: The original occurrence of this friction.
+  #: Follow an existing recurs chain to its root.
+  #: A backlink alone does not establish recurrence.
+  #: Any correction state is valid, including a forged root whose remedy failed.
+  recurs?: correction*
+body:
+  - use: correction

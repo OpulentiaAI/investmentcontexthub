@@ -1,0 +1,14 @@
+#: A citation. Nothing in this hub asserts a fact without one.
+#: Extends source: captured material with an origin.
+extends: [source::au-base-types]
+fields:
+  #: The specific claim this supports.
+  claim: String
+  #: When it was observed.
+  observedAt: Date
+  #: How it was obtained.
+  method: [read, api, cli, browser, mcp, human]
+  #: Set once a coordinator reopened the source independently.
+  verifiedBy?: String
+  #: verified = we reopened it. reported = the author's claim. unverified = no source.
+  confidence: [verified, reported, unverified]

@@ -1,0 +1,26 @@
+{
+  "name": "WattsKnowledgeSystem",
+  "version": "0.1.0",
+  "base": "arsumbris-self-contained",
+  "entry": "watts-knowledge-system",
+  "workspace": "watts-knowledge-system/workspace-layout.yaml",
+  "install": "INSTALL.md",
+  "onboarding": "docs/onboarding.md",
+  "agentSetup": "AGENT-SETUP.md",
+  "runtimeSkill": "skills/opulent-onboarding/SKILL.md",
+  "providers": "optional; no account is connected by install",
+  "engines": [
+    "au-engine",
+    "au-host",
+    "au-mcp",
+    "au-type-system",
+    "au-weave",
+    "au-ingest"
+  ],
+  "materials": [
+    "opulent-core",
+    "opulent-gtm-master-xstrategy",
+    "jev-decision-layer",
+    "ideal-personal-context"
+  ]
+}

@@ -1,0 +1,10 @@
+#: A forecast or scorecard receipt for investment research.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  subject: String
+  horizon: String
+  method: String
+  inputs?: String[]
+  output?: String
+  confidence?: [low, medium, high]
+  evidence?: wks.evidence&[]

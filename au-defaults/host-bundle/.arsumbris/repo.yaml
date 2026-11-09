@@ -1,0 +1,55 @@
+# The host UI composition bundle — a pure AGGREGATOR node (au.engine.repo). Its `deps` ARE the host's
+# full UI projection + framework closure: naming `host-bundle` in a workspace's `discover:` pulls the
+# whole set in (deps travel transitively; type-side safe — declaring unreferenced deps folds no types).
+#
+# MAINTENANCE (monorepo mode): adding/removing a first-party UI projection or vocabulary package MUST
+# be mirrored here.
+type: au.engine.repo::au-engine
+name: host-bundle
+description: aggregator for the host's UI composition closure (projections + first-party vocabulary)
+deps:
+  - name: au-host-sdk
+  - name: component-contract
+  - name: au-component-catalog
+  - name: au-component-set
+  - name: force-graph
+  - name: aup-git-activity
+  - name: aup-reader
+  - name: aup-workspace-sidebar
+  - name: aup-switchboard
+  - name: style
+  - name: selection
+  - name: range
+  - name: intent
+  - name: bento
+  - name: tabs
+  - name: sandwich
+  - name: column
+  - name: dock
+  - name: bar
+  - name: file-tree
+  - name: editor
+  - name: terminal
+  - name: backlinks
+  - name: keymap-editor
+  - name: radial-tree
+  - name: focal-tree
+  - name: diagnostics
+  - name: type-list
+  - name: type-instances
+  - name: status-bar
+  - name: notifications
+  - name: layout-inspector
+  - name: daemon-control
+  - name: aup-mcp-session-retention
+  - name: debug
+  - name: trace-inspector
+  - name: workspace-panel
+  - name: theming-pane
+  - name: scope-panel
+  - name: hello
+  - name: placeholder-picker
+  - name: au-avatar
+  - name: agent-sessions
+  - name: settings
+  - name: media-viewers

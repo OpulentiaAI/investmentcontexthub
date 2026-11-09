@@ -1,0 +1,6 @@
+type: au.engine.repo::au-engine
+name: opulent-gtm-master-xstrategy
+description: "Published GTM master strategy package (OpulentiaAI private repo): SKILL.md, operating sequence, account/campaign contracts, 44-use-case catalog, PII-safe Diego workbook profile, field-theory corpus evidence, strategy PDF."
+tldr: "Evidence-backed GTM master strategy skill package."
+deps:
+  - name: au-base-types

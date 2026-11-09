@@ -1,0 +1,9 @@
+# Folder-repo identity (au.engine.repo). The upstream vision doc this workspace extends:
+# platform exports, AI conversations, public work, private notes, consented conversations ->
+# a private, living personal wiki that agents draw context from.
+type: au.engine.repo::au-engine
+name: ideal-personal-context
+remote: https://github.com/OpulentiaAI/ideal-personal-context.git
+description: The ideal-personal-context vision and taxonomy (OpulentiaAI fork of Milbaxter). Kept mounted so its spine and vocabulary stay referenceable inside the graph.
+deps:
+  - name: au-base-types

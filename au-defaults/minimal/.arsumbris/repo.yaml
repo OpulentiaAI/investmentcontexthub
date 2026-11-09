@@ -1,0 +1,12 @@
+# A file tree beside a document. Its composition (minimal.yaml) is copied from the host's
+# shipped default templates; the deps below are EXACTLY the ::repo qualifiers that composition
+# and its keymap cross (the peer gate tests this repo's own dep list, so each must be direct).
+type: au.engine.repo::au-engine
+name: minimal
+description: a file tree beside a document, and nothing else
+deps:
+  - name: au-host-sdk           # composition / window / keymap base types
+  - name: bento                 # bento::bento, bento-node.branch::bento (the split)
+  - name: file-tree             # file-tree::file-tree
+  - name: editor                # editor-pane::editor (the document)
+  - name: intent                # save / palette / close intents referenced by the keymap

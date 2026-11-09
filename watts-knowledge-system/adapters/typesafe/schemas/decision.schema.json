@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TypeSafe Adapter Decision Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["outcome", "probability", "threshold", "reason", "send"],
+  "properties": {
+    "outcome": {"enum": ["pass", "fail", "review", "abstain", "unavailable", "refused"]},
+    "probability": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "threshold": {"type": "number", "minimum": 0, "maximum": 1},
+    "reason": {"type": "string", "minLength": 1},
+    "send": {"const": false}
+  }
+}

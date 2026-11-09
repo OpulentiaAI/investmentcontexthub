@@ -1,0 +1,12 @@
+#: One drafted message. Never ships without a human confirm.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  channel: [email, linkedin, call, event]
+  subject?: String
+  wordCap: Number{integer}
+  #: MUST stay no until a human types the confirm word.
+  sendReady: [no]
+  reviewState: [hold, approved, sent, rejected]
+  slopChecked: [yes, no]
+  #: The cited observation this opener quotes.
+  groundedOn: wks.observation*

@@ -1,0 +1,9 @@
+#: When an automation fires. Inline value on an automation, not its own page.
+extends: [idea::au-base-types]
+fields:
+  kind: [cron, event, webhook, manual]
+  #: Cron string, or the event/webhook name.
+  expression: String
+  timezone: String
+  #: parallel-monitor | opulent-native | mcp | manual
+  source: String

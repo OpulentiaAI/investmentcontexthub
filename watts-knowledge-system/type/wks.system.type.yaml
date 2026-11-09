@@ -1,0 +1,9 @@
+#: A system owned or used by Derrick Watts.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  kind: [email, calendar, files, crm, meetings, phone, public-web, broker, other]
+  vendor?: String
+  accessPath?: [mcp, api, browser, cli, export, native]
+  authOwner: String
+  connected: [yes, no, error]
+  blockerNote?: String

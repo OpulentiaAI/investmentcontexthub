@@ -1,0 +1,5 @@
+#: A slice of the graph, presented as an authored page or a computed view.
+#: It gathers a selection of nodes for navigation or understanding.
+#: It extends idea, retains all inherited fields, and adds none.
+#: Body links can connect the selected nodes, including other maps.
+extends: idea

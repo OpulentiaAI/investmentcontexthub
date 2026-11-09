@@ -1,0 +1,17 @@
+extends: [idea::au-base-types, wks.managed]
+fields:
+  learningId: String
+  kind: [system-fact, operating-practice]
+  scope: String
+  content: String
+  rationale: String
+  sourceRef: String
+  sourceSha256: String
+  sourceKind: [human, artifact, telemetry, code, documentation]
+  decision: [candidate, accepted, rejected, superseded]
+  reviewReceipt?: String
+  reviewReceiptSha256?: String
+  supersededBy?: wks.learning*
+body:
+  - section: Evidence
+  - section: Applicability

@@ -1,0 +1,4 @@
+#: A competency requirement the workspace cannot yet meet.
+#: Query competency-question.open for the frontier used by derive and self-research.
+#: The body explains the stakes and what answering the question requires.
+extends: competency-question

@@ -1,0 +1,6 @@
+#: A question whose research step completed with a reviewed article.
+#: An article's answers reference accepts this state.
+#: Several articles may answer the same question.
+#: The workflow checks that a reviewed answer exists before recording completion.
+#: This type alone does not establish that an answer exists.
+extends: question

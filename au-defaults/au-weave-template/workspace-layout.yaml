@@ -1,0 +1,167 @@
+type: composition::au-host-sdk
+intent-routing:
+  wires:
+    - intent: "[[open-intent::intent]]"
+      mode: fallback
+      source: "[[^^tree]]"
+      targets:
+        - "[[^^document-tabs]]"
+  defaults:
+    - intent: "[[open-intent::intent]]"
+      roles: ["[[tabs::tabs]]"]
+      mode: priority
+slot-defaults:
+  placeholder: "[[placeholder-picker::placeholder-picker]]"
+viewer-defaults:
+  defaults:
+    - opens: yaml
+      viewer: "[[editor-pane::editor]]"
+    - opens: yml
+      viewer: "[[editor-pane::editor]]"
+    - opens: yamls
+      viewer: "[[editor-pane::editor]]"
+    - opens: md
+      viewer: "[[aup-reader::aup-reader]]"
+    - opens: markdown
+      viewer: "[[aup-reader::aup-reader]]"
+    - opens: mdx
+      viewer: "[[aup-reader::aup-reader]]"
+    - opens: png
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: jpg
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: jpeg
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: webp
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: avif
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: gif
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: apng
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: svg
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: bmp
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: ico
+      viewer: "[[image-viewer::media-viewers]]"
+    - opens: pdf
+      viewer: "[[pdf-viewer::media-viewers]]"
+    - opens: mp4
+      viewer: "[[video-viewer::media-viewers]]"
+    - opens: webm
+      viewer: "[[video-viewer::media-viewers]]"
+    - opens: mov
+      viewer: "[[video-viewer::media-viewers]]"
+    - opens: m4v
+      viewer: "[[video-viewer::media-viewers]]"
+    - opens: mp3
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: wav
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: m4a
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: aac
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: flac
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: ogg
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: opus
+      viewer: "[[audio-viewer::media-viewers]]"
+    - opens: html
+      viewer: "[[html-viewer::media-viewers]]"
+    - opens: htm
+      viewer: "[[html-viewer::media-viewers]]"
+    - opens: "*"
+      viewer: "[[editor-pane::editor]]"
+windows:
+  - "[[^^au-window-primary]]"
+projections:
+  - ^: au-window-primary
+    content: "[[^^workspace]]"
+    primary: true
+    type: window::au-host-sdk
+  - ^: workspace
+    center:
+      child: "[[^^documents]]"
+      type: sandwich-slot::sandwich
+    left:
+      child: "[[^^sidebar]]"
+      hideHeader: true
+      label: Files
+      size: 256
+      type: sandwich-slot::sandwich
+      minSize: 200
+    right:
+      child: "[[^^right-stack]]"
+      hideHeader: true
+      label: Agent sessions
+      size: 320
+      type: sandwich-slot::sandwich
+      minSize: 220
+      showCollapseControl: false
+    type: sandwich::sandwich
+  - ^: sidebar
+    body: "[[^^sidebar-stack]]"
+    type: aup-workspace-sidebar::aup-workspace-sidebar
+  - ^: sidebar-stack
+    addButton: always
+    items:
+      - child: "[[^^tree]]"
+        size: 65
+        type: column-slot::column
+      - child: "[[^^sidebar-focal-tree]]"
+        size: 35
+        type: column-slot::column
+    itemHeaders: always
+    type: column::column
+  - ^: sidebar-focal-tree
+    type: force-graph::force-graph
+    nodeScale: 1.2
+    selectionZoom: 0.9
+  - ^: tree
+    type: file-tree::file-tree
+  - ^: documents
+    root: "[[^^document-tabs]]"
+    type: bento::bento
+  - ^: document-tabs
+    type: tabs::tabs
+    defaultOpenMode: permanent
+    tabs:
+      - "[[^^reader]]"
+    newTabPosition: after-source
+    activeTab: reader
+  - type: aup-reader::aup-reader
+    ^: reader
+    file: start here.md
+  - ^: right-stack
+    addButton: always
+    items:
+      - child: "[[^^session-tabs]]"
+        size: 852.558496579602
+        type: column-slot::column
+      - child: "[[^^avatar]]"
+        size: 147.44150342039802
+        type: column-slot::column
+    itemHeaders: always
+    type: column::column
+  - ^: avatar
+    backdrop: false
+    character: umbra
+    type: aup-avatar::au-avatar
+  - ^: session-launcher
+    type: agent-session-launcher::agent-sessions
+    profile: "[[Codex]]"
+    prompt: clean
+  - ^: session-tabs
+    emptyPlaceholder: "[[placeholder-picker::placeholder-picker]]"
+    replaceEmptyPlaceholderOnOpen: true
+    startView: "[[^^session-launcher]]"
+    startViewCompactWhen: "[[terminal::terminal]]"
+    tabs: []
+    type: tabs::tabs
+key-sequence-timeout-ms: 1200
+keymaps:
+  - "[[navigation.keymap]]"

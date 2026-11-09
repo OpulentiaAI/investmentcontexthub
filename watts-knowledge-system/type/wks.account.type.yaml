@@ -1,0 +1,13 @@
+#: An Opulent production account this hub pilots.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  email: String
+  opulentUserId: String
+  plan: [Free, Pro, Heavy]
+  #: e.g. [OPERATOR_DEPLOYMENT: private configuration]
+  deployment: String
+  balanceCents?: Number{>=0}
+  workspaceId?: String
+  #: yes = no general Opulent workspace membership.
+  isolated: [yes, no]
+  evidence?: wks.evidence&[]

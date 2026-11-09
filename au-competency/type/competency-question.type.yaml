@@ -1,0 +1,32 @@
+#: One requirement the workspace must be able to answer or perform.
+#: Claim an open, answered or dropped leaf.
+#: Improve records an answer after demonstrating the required behavior.
+#: Terminal questions stay closed.
+#: A regression is a new requirement.
+#: The title states the question.
+#: The body explains the stakes, success conditions and structural need.
+sealed:
+  - competency-question.open
+  - competency-question.answered
+  - competency-question.dropped
+fields:
+  #: Signals that revealed or corroborate the requirement.
+  #: These can include findings, corrections, research articles or other evidence.
+  #: More references alone do not establish recurrence or support.
+  #: Optional for a proactive requirement.
+  from?: any*[]
+  #: The workspace premise grounding this requirement.
+  #: Select the relevant premise when several exist.
+  #: Optional for a proactive requirement whose premise is not yet established.
+  serves?: workspace-premise*
+  #: Research questions selected to investigate this requirement.
+  #: Selection does not include descendants or establish evidence support.
+  #: It grants no ownership and marks no work complete.
+  #: An absent or empty list records no selection.
+  #: Order is not priority and duplicates add no support.
+  #: Questions in every state remain selectable.
+  #: Retain dropped leads as historical context.
+  #: Use live references to whole question files.
+  #: The shape also admits typed blocks, which research callers must reject.
+  #: Read this record's own effective values, including body contributions.
+  research?: question::au-tree-research*[]

@@ -1,0 +1,13 @@
+#: A reusable decision principle with a reason and an explicit scope.
+#: The optional sections provide a starting structure, with declared order when used.
+#: Authors may use other sections and examples when they make the decision clearer.
+extends: guide
+body:
+  - section?: The principle
+    guidance: "State the recommendation and the decision it helps make."
+  - section?: Why
+    guidance: "Explain the benefit, cost, or mechanism behind the recommendation."
+  - section?: When it binds
+    guidance: "Name the conditions in which it applies and meaningful exceptions."
+  - section?: The habit
+    guidance: "Give the reader a useful check or practice, with evidence appropriate to the claim."

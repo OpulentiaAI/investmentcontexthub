@@ -1,0 +1,13 @@
+#: An operating procedure a human or agent opens at a known moment.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  #: When to open this.
+  trigger: String
+  audience: [operator, opulent, derrick-watts]
+  #: The only conditions that reach a human.
+  escalateWhen: String[+]
+  relatedAutomations?: wks.automation*[]
+body:
+  - section: Procedure
+  - section: Verification
+  - section: Failure branches

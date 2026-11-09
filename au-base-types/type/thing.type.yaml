@@ -1,0 +1,6 @@
+#: Something that exists and persists, such as a person or company.
+#: Other knowledge can describe it or refer to it as a participant.
+extends: node
+fields:
+  #: Alternate names that consumers can use for search and matching.
+  aliases?: String[+]

@@ -1,0 +1,14 @@
+#: A play borrowed from outside research. Always attributed.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  #: Author or repo.
+  source: String
+  sourceUrl: String
+  category: [sourcing, enrichment, copy, sequencing, events, ops, architecture, tracking]
+  appliesTo?: wks.signal*[]
+  #: Quote the author's claim. Never restate it as our own number.
+  claimedResult?: String
+  adoptionState: [adopted, adapted, rejected, backlog]
+body:
+  - section: The play
+  - section: How we apply it for Watts

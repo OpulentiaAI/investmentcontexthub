@@ -1,0 +1,9 @@
+#: Standing writing preferences. One-off instructions do not belong here.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  holder: String
+  defaultSurfaces: String[+]
+  maxThreadPosts?: Number{integer}
+body:
+  - section: Standing
+  - section: Do not save

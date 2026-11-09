@@ -1,0 +1,43 @@
+#: A supported change to a workspace's capability.
+#: Propose develops the change and the human rules on its scope.
+#: Improve builds accepted scope and demonstrates the promised behavior.
+#: One proposal can combine several mechanisms.
+#: A small change needs no separate architecture design.
+#: A useful prerequisite can leave a larger competency open.
+#:
+#: Claim a proposed, accepted, rejected or implemented leaf.
+#: Rejected and implemented records are terminal.
+#: Changed grounds can justify a new proposal without reopening a rejected one.
+#: State claims and diagnostics do not prove that behavior was delivered.
+#:
+#: Answers is declared per leaf because inherited fields cannot be narrowed.
+#: Only the implemented leaf requires answered targets.
+sealed:
+  - proposal.proposed
+  - proposal.accepted
+  - proposal.rejected
+  - proposal.implemented
+fields:
+  #: Graph references to evidence supporting the change.
+  #: These can include articles, corrections, findings, contracts or other grounds.
+  #: Explain their support in the body.
+  #: A body contribution needs a grounds anchor in frontmatter.
+  #: Read this proposal's own effective values to include those contributions.
+  grounds: any*[+]
+body:
+  - section: The change
+    guidance: >-
+      State the behavior and scope the human is asked to accept.
+      Name the mechanisms and their responsibilities.
+      Include operations, activation or migration needed to make them usable.
+      Keep a simple change short.
+      When an architecture carries the design, link its relevant revision.
+      Summarize the choices that determine this proposal without copying the design.
+      Separate expected acceptance checks from observed results.
+      For a prerequisite, state what it supplies and which obligations remain open.
+  - section: Why
+    guidance: >-
+      Explain the case from the linked grounds and why the existing route is insufficient.
+      Connect methods or recurring evidence to the proposed behavior.
+      Keep consequential dependencies and unsupported choices visible.
+      Preserve the competency's requirement when choosing the proposed scope.

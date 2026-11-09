@@ -1,0 +1,15 @@
+#: A rejected change records what the human weighed and ruled out.
+#: It is terminal and uses the parent body.
+#: improve and propose read this record before suggesting the same scope again.
+#: Preserve the decision and its grounds.
+#: Changed grounds can justify a new proposal without reopening this one.
+extends: proposal
+fields:
+  #: Questions the proposal would have closed, kept as the original promise.
+  #: Any state is allowed because rejection built nothing and another route may
+  #: have answered the question.
+  #: Optional for a recurrence proposal or a prerequisite without a closure promise.
+  #: Declared per leaf, strict answered targets apply only to implemented.
+  answers?: competency-question*[]
+body:
+  - use: proposal

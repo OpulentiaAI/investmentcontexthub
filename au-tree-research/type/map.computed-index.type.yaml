@@ -1,0 +1,25 @@
+#: A computed tree of articles and open questions rooted at one premise.
+#: refresh_research_map derives it from the engine and writes through engine mutations.
+#: Refresh replaces only Index contents, preserving frontmatter, the heading and other sections.
+#: Question parents determine nesting; researched and dropped question entries and tldrs are hidden.
+#: An open question and any answers share one row, with descendants beneath it.
+#: The map inherits map::au-base-types for navigation discovery.
+extends: map::au-base-types
+fields:
+  #: The premise whose tree this map indexes.
+  #: This reference identifies the field's existing map.
+  premise: research-premise*
+body:
+  - section: Index
+    guidance: >-
+      Call refresh_research_map with the premise path after tree changes.
+      The tool computes the index without a model call.
+      Show premise, article and open-question links as a nested list.
+      Prefix the premise with §0 and its visible children with §1, §2, and so on.
+      Number descendants hierarchically: §1.1, §1.1.1, §1.2, restarting child numbering under each parent.
+      These display indexes are recomputed on refresh and do not change filenames or link targets.
+      Omit researched and dropped question entries, tldrs, counts and status styling.
+      Skip researched questions without articles and omit dropped branches.
+      Put an open question and any answers on the same row, with descendants below the group.
+      Check warnings for incomplete or unreachable work.
+      The index does not establish article review or a completed state update.

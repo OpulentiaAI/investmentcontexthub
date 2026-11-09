@@ -1,0 +1,14 @@
+type: au.engine.repo::au-engine
+name: watts-knowledge-system
+description: Self-contained Watts Knowledge System — Derrick Watts's persistent personalized investment context hub on arsumbris, with Opulent ingestion, onboarding, connectivity, CRM, automation, portfolio research, forecasting, and critical investor-modeling patterns.
+deps:
+  - name: au-base-types
+  - name: au-weave
+  - name: au-ingest
+  - name: au-agent-guides
+  - name: au-rules
+  - name: au-skills
+  - name: au-govern
+  - name: au-writing-style
+  - name: au-mcp-sdk
+  - name: au-type-system

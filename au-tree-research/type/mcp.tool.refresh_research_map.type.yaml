@@ -1,0 +1,15 @@
+#: Compute one research premise's map from the engine's resolved tree.
+extends: mcp.tool::au-mcp-sdk
+fields:
+  #: Absolute path of the research premise in a local editable member.
+  premise: String
+  #: Preview the generated map without saving. Defaults to false.
+  dry_run?: Boolean
+meta:
+  - type: plugin-runtime-meta::au-mcp-sdk
+    entry: ./refresh-research-map.mjs
+    contractVersion: 0
+  - type: tool-presentation-meta::au-mcp-sdk
+    description: 'Create or refresh a tree of articles and open questions rooted at one premise. Supply the absolute premise path. Question parents determine nesting. Researched question entries and dropped branches stay hidden. Groups an open question and any answers on one row. Replaces only Index. Returns the map path, status and warnings; dry_run returns a preview. Run after field changes finish, with one writer per field.'
+  - type: tool-access-meta::au-mcp-sdk
+    broker: read-write

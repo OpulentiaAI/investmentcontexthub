@@ -1,0 +1,10 @@
+#: Knowledge identified by its content, such as a claim or observation.
+extends: node
+fields:
+  #: The subjects this idea is about.
+  about?: any*[]
+  #: Ideas and captured sources that support this idea.
+  based_on?: <idea | source>*[]
+  #: Ideas with opposing positions, without judging which position holds.
+  #: Backlinks expose the inverse without adding a reciprocal field value.
+  in_tension_with?: idea*[]

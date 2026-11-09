@@ -1,0 +1,8 @@
+.DS_Store
+
+# Local session state and recordings.
+operations/
+
+# python bytecode
+__pycache__/
+*.pyc

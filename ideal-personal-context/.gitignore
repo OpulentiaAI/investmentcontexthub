@@ -1,0 +1,21 @@
+# Real personal workspaces must live outside this public checkout.
+/private/
+/data/
+/raw/
+/extracted/
+/wiki/
+/consent/
+/context-packs/
+.env
+.env.*
+*.key
+*.pem
+*.zip
+*.tgz
+*.tar
+*.gz
+*.sqlite*
+*.db
+.DS_Store
+__pycache__/
+.venv/

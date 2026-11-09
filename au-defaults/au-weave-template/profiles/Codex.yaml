@@ -1,0 +1,2 @@
+type: agent-profile::au-mcp-sdk
+adapter: "[[mcp.adapter.codex::au-mcp-adapter-codex]]"

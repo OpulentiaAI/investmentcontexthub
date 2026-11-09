@@ -1,0 +1,21 @@
+#: One repeatable universal-search execution and its captured result set.
+#: Extends event: the search happened at a date and produced dated evidence.
+extends: [event::au-base-types, wks.managed]
+fields:
+  #: The exact search intent, so another operator can rerun it.
+  query: String
+  #: Systems searched. An omitted source is not an exhausted source.
+  sources: String[+]
+  #: When the result set was captured.
+  capturedAt: Date
+  #: Count only rows retained in the captured artifact.
+  resultCount: Number{integer}
+  #: Repository-relative path to the immutable captured result set.
+  artifactPath: String
+  #: SHA-256 recomputed from the captured artifact.
+  artifactSha256: String
+  #: Empty means UNVERIFIED, not that the search found zero results.
+  evidence?: wks.evidence*[]
+  #: UNVERIFIED is required when no evidence rows were retained.
+  disposition: [verified, unverified, incomplete, discarded]
+

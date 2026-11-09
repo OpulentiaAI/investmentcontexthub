@@ -1,0 +1,5 @@
+#: A map over the knowledge graph.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  slice?: String
+  entryCount?: Number{integer}

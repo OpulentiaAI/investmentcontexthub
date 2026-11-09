@@ -1,0 +1,42 @@
+# MINIMAL — a file tree beside a document, and nothing else.
+#
+# No chrome, no status bar, no terminal. For someone who wants the substrate and will build their own
+# arrangement on top, and as the honest floor: this is close to the least a useful composition can be.
+#
+# It is also the shape worth reading FIRST if compositions are unfamiliar. A composition is a
+# DOCUMENT: a `root` reference plus a flat `projections` POOL. Each pool entry is one projection (its
+# `type` names the view, its other fields are that view's config). A container names its children BY
+# REFERENCE (`[[^^id]]`) into the pool — it never embeds them. The layout tree is the reference graph;
+# there is no nesting on disk. Here: `grid` (a bento split) references `tree` and `doc`.
+type: composition::au-host-sdk
+# Active keymaps (keybinds): the shipped default (⌘S save, ⌘K toggle palette). Drop this entry to turn the
+# shortcuts off; copy default.keymap.yaml into your vault to remap. Same-repo ref, no cross-repo.
+keymaps:
+  - "[[default.keymap]]"
+windows:
+  - "[[^^au-window-primary]]"
+# The shipped default viewer for a file kind (the explicit ladder's rung 2). Without it, opening an md
+# would surface the host chooser every time (md is eligible for both the editor and the reader); with it,
+# md opens in the editor; an unconfigured ambiguous kind opens the chooser.
+viewer-defaults:
+  defaults:
+    - opens: md
+      viewer: "[[editor-pane::editor]]"
+projections:
+  - type: window::au-host-sdk
+    primary: true
+    content: "[[^^grid]]"
+    ^: au-window-primary
+  - ^: grid
+    type: bento::bento
+    root:
+      type: bento-node.branch::bento
+      direction: row
+      ratio: 0.22
+      children:
+        - "[[^^tree]]"
+        - "[[^^doc]]"
+  - ^: tree
+    type: file-tree::file-tree
+  - ^: doc
+    type: editor-pane::editor

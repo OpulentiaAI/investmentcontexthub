@@ -1,0 +1,138 @@
+type: keymap::au-host-sdk
+keybinds:
+  - chord:
+      - key: backslash
+        mods:
+          - mod
+    intent: "[[split-right-intent::intent]]"
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: arrowright
+    intent: "[[split-right-intent::intent]]"
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: arrowdown
+    intent: "[[split-down-intent::intent]]"
+  - chord:
+      - key: b
+        mods: [mod]
+    intent: "[[toggle-left-sidebar-intent::sandwich]]"
+  - chord:
+      - key: b
+        mods: [mod, alt]
+    intent: "[[toggle-right-sidebar-intent::sandwich]]"
+
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: h
+    intent: "[[toggle-pane-headers-intent::intent]]"
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: c
+    intent: "[[toggle-container-nesting-intent::intent]]"
+  - chord:
+      - key: p
+        mods:
+          - mod
+          - shift
+    intent: "[[toggle-command-palette-intent::intent]]"
+  - chord:
+      - key: arrowleft
+        mods:
+          - mod
+          - alt
+    intent: "[[focus-left-intent::intent]]"
+  - chord:
+      - key: arrowright
+        mods:
+          - mod
+          - alt
+    intent: "[[focus-right-intent::intent]]"
+  - chord:
+      - key: arrowup
+        mods:
+          - mod
+          - alt
+    intent: "[[focus-up-intent::intent]]"
+  - chord:
+      - key: arrowdown
+        mods:
+          - mod
+          - alt
+    intent: "[[focus-down-intent::intent]]"
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: p
+    intent: "[[choose-pane-intent::intent]]"
+  - chord:
+      - key: t
+        mods:
+          - mod
+    intent: "[[new-tab-intent::intent]]"
+  - chord:
+      - key: p
+        mods:
+          - mod
+    intent: "[[search-files-intent::intent]]"
+  - chord:
+      - key: o
+        mods:
+          - mod
+    intent: "[[open-file-dialog-intent::intent]]"
+  - chord:
+      - key: o
+        mods:
+          - mod
+          - shift
+    intent: "[[search-projections-intent::intent]]"
+  - chord:
+      - key: tab
+        mods:
+          - ctrl
+    intent: "[[next-tab-intent::intent]]"
+  - chord:
+      - key: tab
+        mods:
+          - ctrl
+          - shift
+    intent: "[[previous-tab-intent::intent]]"
+  - chord:
+      - key: p
+        mods:
+          - mod
+          - alt
+    intent: "[[search-projections-intent::intent]]"
+  - chord:
+      - key: f1
+    intent: "[[toggle-command-palette-intent::intent]]"
+  - chord:
+      - key: s
+        mods:
+          - mod
+    intent: "[[save-intent::intent]]"
+  - chord:
+      - key: n
+        mods:
+          - mod
+    intent: "[[create-file-intent::intent]]"
+  - chord:
+      - key: k
+        mods:
+          - mod
+      - key: enter
+    intent: "[[keep-tab-intent::intent]]"
+  - chord:
+      - key: w
+        mods:
+          - mod
+    intent: "[[close-view-intent::intent]]"

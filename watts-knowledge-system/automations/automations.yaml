@@ -1,0 +1,10 @@
+format: convergence-neutral-registry-v1
+host: unverified
+source: automations/*.md
+automations:
+  - watts-source-manifest-review
+  - connector-health-check
+  - historical-ingest-heartbeat
+  - portfolio-research-pass
+  - forecast-review
+  - critical-investor-modeling

@@ -1,0 +1,1298 @@
+{
+  "privacy": "Direct identifiers and message text are excluded from this profile.",
+  "workbooks": {
+    "26-0730_Opulentia_Connections_List.xlsx": {
+      "size_bytes": 35315,
+      "sheet_names": [
+        "ICP List",
+        "Jeremy ICP Connections"
+      ],
+      "defined_names": [],
+      "sheets": {
+        "ICP List": {
+          "header_row": 2,
+          "headers": [
+            "",
+            "",
+            "First Name",
+            "Last Name",
+            "URL",
+            "Email Address",
+            "Company",
+            "Position",
+            "Industry",
+            "Use Case"
+          ],
+          "data_rows": 135,
+          "max_row": 137,
+          "max_column": 10,
+          "frozen_panes": null,
+          "filters": null,
+          "tables": [],
+          "columns": {
+            "Column 1": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "Column 2": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "First Name": {
+              "nonempty": 135,
+              "unique": 101,
+              "values_redacted": true
+            },
+            "Last Name": {
+              "nonempty": 135,
+              "unique": 109,
+              "values_redacted": true
+            },
+            "URL": {
+              "nonempty": 135,
+              "unique": 114,
+              "values_redacted": true
+            },
+            "Email Address": {
+              "nonempty": 4,
+              "unique": 4,
+              "values_redacted": true
+            },
+            "Company": {
+              "nonempty": 135,
+              "unique": 109,
+              "top_values": [
+                [
+                  "Accenture",
+                  5
+                ],
+                [
+                  "Atlantis Capital, LLC",
+                  3
+                ],
+                [
+                  "The Academy Group, Inc.",
+                  3
+                ],
+                [
+                  "Extraordinary Capital",
+                  3
+                ],
+                [
+                  "Prospera Law, LLP",
+                  2
+                ],
+                [
+                  "Morganic Group",
+                  2
+                ],
+                [
+                  "Baker Industries L.L.C.",
+                  2
+                ],
+                [
+                  "Axci Capital",
+                  2
+                ],
+                [
+                  "Venture23.io",
+                  2
+                ],
+                [
+                  "WealthQuant",
+                  2
+                ],
+                [
+                  "Expedient Tax Inc",
+                  2
+                ],
+                [
+                  "Fraser Consulting",
+                  2
+                ]
+              ]
+            },
+            "Position": {
+              "nonempty": 135,
+              "unique": 79,
+              "top_values": [
+                [
+                  "Co-Founder",
+                  10
+                ],
+                [
+                  "Founder & CEO",
+                  7
+                ],
+                [
+                  "Founder",
+                  7
+                ],
+                [
+                  "General Partner",
+                  6
+                ],
+                [
+                  "Chief Executive Officer",
+                  5
+                ],
+                [
+                  "CEO",
+                  5
+                ],
+                [
+                  "AG: Ventures Consultant",
+                  3
+                ],
+                [
+                  "Founder / Chief Extraordinary Officer",
+                  3
+                ],
+                [
+                  "Founder/CEO",
+                  3
+                ],
+                [
+                  "Chief AI Officer",
+                  2
+                ],
+                [
+                  "Founder/Tech Innovation Consultant",
+                  2
+                ],
+                [
+                  "Chief Contract Officer",
+                  2
+                ]
+              ]
+            },
+            "Industry": {
+              "nonempty": 135,
+              "unique": 9,
+              "top_values": [
+                [
+                  "Financial Services",
+                  60
+                ],
+                [
+                  "Consulting",
+                  34
+                ],
+                [
+                  "Manufacturing",
+                  12
+                ],
+                [
+                  "Legal",
+                  7
+                ],
+                [
+                  "Professional Services",
+                  6
+                ],
+                [
+                  "Insurance",
+                  6
+                ],
+                [
+                  "Tax & Accounting",
+                  4
+                ],
+                [
+                  "Venture Capital",
+                  4
+                ],
+                [
+                  "Private Equity",
+                  2
+                ]
+              ]
+            },
+            "Use Case": {
+              "nonempty": 135,
+              "unique": 19,
+              "top_values": [
+                [
+                  "Deal Flow Triage & Screening",
+                  34
+                ],
+                [
+                  "Data Analysis as an Agent-Run Workflow",
+                  25
+                ],
+                [
+                  "Contract Termination Review",
+                  11
+                ],
+                [
+                  "Portfolio Intelligence Automation",
+                  11
+                ],
+                [
+                  "Financial Compliance Review",
+                  7
+                ],
+                [
+                  "Manufacturing Site Analytics",
+                  7
+                ],
+                [
+                  "Opulent x Clodo: People Search into Reviewed Pipelines",
+                  6
+                ],
+                [
+                  "Deal Sourcing as a Self-Driving CRM",
+                  5
+                ],
+                [
+                  "Forecast Cash Flow to the Liquidity Low Point",
+                  5
+                ],
+                [
+                  "Pre-Call Intelligence Briefs",
+                  4
+                ],
+                [
+                  "Stock Transaction Forensics",
+                  4
+                ],
+                [
+                  "Corporate Restructuring Analysis",
+                  4
+                ]
+              ]
+            }
+          },
+          "fill_color_counts": [
+            [
+              "Values must be of type <class 'str'>",
+              1080
+            ]
+          ]
+        },
+        "Jeremy ICP Connections": {
+          "header_row": 2,
+          "headers": [
+            "",
+            "",
+            "First Name",
+            "Last Name",
+            "URL",
+            "Email Address",
+            "Company",
+            "Position",
+            "Industry",
+            "ICP Match",
+            "Use Case",
+            "LinkedIn Message"
+          ],
+          "data_rows": 28,
+          "max_row": 95,
+          "max_column": 12,
+          "frozen_panes": null,
+          "filters": null,
+          "tables": [],
+          "columns": {
+            "Column 1": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "Column 2": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "First Name": {
+              "nonempty": 28,
+              "unique": 27,
+              "values_redacted": true
+            },
+            "Last Name": {
+              "nonempty": 28,
+              "unique": 27,
+              "values_redacted": true
+            },
+            "URL": {
+              "nonempty": 28,
+              "unique": 28,
+              "values_redacted": true
+            },
+            "Email Address": {
+              "nonempty": 1,
+              "unique": 1,
+              "values_redacted": true
+            },
+            "Company": {
+              "nonempty": 28,
+              "unique": 26,
+              "top_values": [
+                [
+                  "Accenture",
+                  2
+                ],
+                [
+                  "Founders & Funders",
+                  2
+                ],
+                [
+                  "Atlantis Capital, LLC",
+                  1
+                ],
+                [
+                  "Morganic Group",
+                  1
+                ],
+                [
+                  "The Academy Group, Inc.",
+                  1
+                ],
+                [
+                  "Extraordinary Capital",
+                  1
+                ],
+                [
+                  "Baker Industries L.L.C.",
+                  1
+                ],
+                [
+                  "Axci Capital",
+                  1
+                ],
+                [
+                  "Venture23.io",
+                  1
+                ],
+                [
+                  "WealthQuant",
+                  1
+                ],
+                [
+                  "Expedient Tax Inc",
+                  1
+                ],
+                [
+                  "Fraser Consulting",
+                  1
+                ]
+              ]
+            },
+            "Position": {
+              "nonempty": 28,
+              "unique": 24,
+              "top_values": [
+                [
+                  "Co-Founder",
+                  3
+                ],
+                [
+                  "General Partner",
+                  2
+                ],
+                [
+                  "Founder & CEO",
+                  2
+                ],
+                [
+                  "Founder/Tech Innovation Consultant",
+                  1
+                ],
+                [
+                  "AG: Ventures Consultant",
+                  1
+                ],
+                [
+                  "Founder / Chief Extraordinary Officer",
+                  1
+                ],
+                [
+                  "Chief Contract Officer",
+                  1
+                ],
+                [
+                  "Chairman/President & Co-founder",
+                  1
+                ],
+                [
+                  "Chief Relationship Officer",
+                  1
+                ],
+                [
+                  "Founder/CEO",
+                  1
+                ],
+                [
+                  "Founder and Principal",
+                  1
+                ],
+                [
+                  "President of Operations, Farmers insurance MN & CA",
+                  1
+                ]
+              ]
+            },
+            "Industry": {
+              "nonempty": 28,
+              "unique": 6,
+              "top_values": [
+                [
+                  "Financial Services",
+                  11
+                ],
+                [
+                  "Consulting",
+                  9
+                ],
+                [
+                  "Venture Capital",
+                  4
+                ],
+                [
+                  "Manufacturing",
+                  2
+                ],
+                [
+                  "Tax & Accounting",
+                  1
+                ],
+                [
+                  "Insurance",
+                  1
+                ]
+              ]
+            },
+            "ICP Match": {
+              "nonempty": 28,
+              "unique": 7,
+              "top_values": [
+                [
+                  "Financial Services",
+                  11
+                ],
+                [
+                  "Consulting Firms",
+                  9
+                ],
+                [
+                  "Non-ICP",
+                  3
+                ],
+                [
+                  "Manufacturing",
+                  2
+                ],
+                [
+                  "Tax & Accounting",
+                  1
+                ],
+                [
+                  "Insurance",
+                  1
+                ],
+                [
+                  "Venture Capital",
+                  1
+                ]
+              ]
+            },
+            "Use Case": {
+              "nonempty": 28,
+              "unique": 15,
+              "top_values": [
+                [
+                  "Deal Flow Triage & Screening",
+                  5
+                ],
+                [
+                  "Data Analysis as an Agent-Run Workflow",
+                  4
+                ],
+                [
+                  "Portfolio Intelligence Automation",
+                  3
+                ],
+                [
+                  "Relationship Intelligence for the Warm Intro",
+                  3
+                ],
+                [
+                  "Pre-Call Intelligence Briefs",
+                  2
+                ],
+                [
+                  "Corporate Restructuring Analysis",
+                  2
+                ],
+                [
+                  "Contract Termination Review",
+                  1
+                ],
+                [
+                  "Deal Sourcing as a Self-Driving CRM",
+                  1
+                ],
+                [
+                  "Stock Transaction Forensics",
+                  1
+                ],
+                [
+                  "Autonomous Triage for Knowledge Work Queues",
+                  1
+                ],
+                [
+                  "Forecast Cash Flow to the Liquidity Low Point",
+                  1
+                ],
+                [
+                  "Financial Compliance Review",
+                  1
+                ]
+              ]
+            },
+            "LinkedIn Message": {
+              "nonempty": 28,
+              "unique": 28,
+              "values_redacted": true
+            }
+          },
+          "fill_color_counts": [
+            [
+              "Values must be of type <class 'str'>",
+              280
+            ]
+          ]
+        }
+      }
+    },
+    "All_Opulentia_Connections.xlsx": {
+      "size_bytes": 625104,
+      "sheet_names": [
+        "Sheet1"
+      ],
+      "defined_names": [],
+      "sheets": {
+        "Sheet1": {
+          "header_row": 2,
+          "headers": [
+            "Owner",
+            "",
+            "",
+            "First Name",
+            "Last Name",
+            "URL",
+            "Email Address",
+            "Company",
+            "Position",
+            "Industry",
+            "ICP Match",
+            "Connected On"
+          ],
+          "data_rows": 4366,
+          "max_row": 4368,
+          "max_column": 12,
+          "frozen_panes": null,
+          "filters": null,
+          "tables": [
+            "Table1"
+          ],
+          "columns": {
+            "Owner": {
+              "nonempty": 2,
+              "unique": 2,
+              "top_values": [
+                [
+                  "Jeremy",
+                  1
+                ],
+                [
+                  "Morgan",
+                  1
+                ]
+              ]
+            },
+            "Column 2": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "Column 3": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "First Name": {
+              "nonempty": 4245,
+              "unique": 2196,
+              "values_redacted": true
+            },
+            "Last Name": {
+              "nonempty": 4245,
+              "unique": 3562,
+              "values_redacted": true
+            },
+            "URL": {
+              "nonempty": 4245,
+              "unique": 4194,
+              "values_redacted": true
+            },
+            "Email Address": {
+              "nonempty": 77,
+              "unique": 75,
+              "values_redacted": true
+            },
+            "Company": {
+              "nonempty": 4205,
+              "unique": 3444,
+              "top_values": [
+                [
+                  "Accenture",
+                  154
+                ],
+                [
+                  "Google",
+                  23
+                ],
+                [
+                  "Deloitte",
+                  23
+                ],
+                [
+                  "Self-employed",
+                  22
+                ],
+                [
+                  "U.S. Bank",
+                  16
+                ],
+                [
+                  "Stealth Startup",
+                  15
+                ],
+                [
+                  "Freelance",
+                  11
+                ],
+                [
+                  "Salesforce",
+                  10
+                ],
+                [
+                  "Buro Happold",
+                  10
+                ],
+                [
+                  "J.P. Morgan",
+                  8
+                ],
+                [
+                  "Microsoft",
+                  7
+                ],
+                [
+                  "Apple",
+                  7
+                ]
+              ]
+            },
+            "Position": {
+              "nonempty": 4207,
+              "unique": 2771,
+              "top_values": [
+                [
+                  "Founder",
+                  142
+                ],
+                [
+                  "Co-Founder",
+                  78
+                ],
+                [
+                  "Founder & CEO",
+                  73
+                ],
+                [
+                  "Chief Executive Officer",
+                  61
+                ],
+                [
+                  "Partner",
+                  45
+                ],
+                [
+                  "Managing Director",
+                  43
+                ],
+                [
+                  "Co-Founder & CEO",
+                  41
+                ],
+                [
+                  "CEO",
+                  41
+                ],
+                [
+                  "President",
+                  38
+                ],
+                [
+                  "Managing Partner",
+                  30
+                ],
+                [
+                  "Owner",
+                  29
+                ],
+                [
+                  "Vice President",
+                  26
+                ]
+              ]
+            },
+            "Industry": {
+              "nonempty": 4208,
+              "unique": 23,
+              "top_values": [
+                [
+                  "FLAG",
+                  2123
+                ],
+                [
+                  "Technology",
+                  492
+                ],
+                [
+                  "Consulting",
+                  391
+                ],
+                [
+                  "Financial Services",
+                  311
+                ],
+                [
+                  "Healthcare",
+                  153
+                ],
+                [
+                  "Higher Education",
+                  137
+                ],
+                [
+                  "Legal",
+                  76
+                ],
+                [
+                  "Media & Entertainment",
+                  74
+                ],
+                [
+                  "Manufacturing",
+                  70
+                ],
+                [
+                  "Retail & Consumer",
+                  57
+                ],
+                [
+                  "Energy & Utilities",
+                  47
+                ],
+                [
+                  "Insurance",
+                  46
+                ]
+              ]
+            },
+            "ICP Match": {
+              "nonempty": 4208,
+              "unique": 8,
+              "top_values": [
+                [
+                  "FLAG",
+                  2123
+                ],
+                [
+                  "Non-ICP",
+                  1232
+                ],
+                [
+                  "Consulting Firms",
+                  391
+                ],
+                [
+                  "Financial Services",
+                  311
+                ],
+                [
+                  "Manufacturing",
+                  70
+                ],
+                [
+                  "Insurance",
+                  46
+                ],
+                [
+                  "Private Equity",
+                  18
+                ],
+                [
+                  "Tax & Accounting",
+                  17
+                ]
+              ]
+            },
+            "Connected On": {
+              "nonempty": 4366,
+              "unique": 1730,
+              "top_values": [
+                [
+                  "2026-05-12 00:00:00",
+                  51
+                ],
+                [
+                  "2025-10-23 00:00:00",
+                  24
+                ],
+                [
+                  "2018-08-20 00:00:00",
+                  24
+                ],
+                [
+                  "2026-03-26 00:00:00",
+                  22
+                ],
+                [
+                  "2026-05-13 00:00:00",
+                  19
+                ],
+                [
+                  "2026-03-06 00:00:00",
+                  19
+                ],
+                [
+                  "2018-03-20 00:00:00",
+                  19
+                ],
+                [
+                  "2026-05-20 00:00:00",
+                  18
+                ],
+                [
+                  "2026-05-11 00:00:00",
+                  18
+                ],
+                [
+                  "2026-03-09 00:00:00",
+                  18
+                ],
+                [
+                  "2010-03-23 00:00:00",
+                  18
+                ],
+                [
+                  "2026-03-19 00:00:00",
+                  17
+                ]
+              ]
+            }
+          },
+          "fill_color_counts": [
+            [
+              "Values must be of type <class 'str'>",
+              39296
+            ]
+          ]
+        }
+      }
+    },
+    "Opulentia_ICP_Connections_V1.xlsx": {
+      "size_bytes": 67579,
+      "sheet_names": [
+        "ICP Only Table",
+        "Notes"
+      ],
+      "defined_names": [],
+      "sheets": {
+        "ICP Only Table": {
+          "header_row": 2,
+          "headers": [
+            "",
+            "",
+            "First Name",
+            "Last Name",
+            "URL",
+            "Email Address",
+            "Company",
+            "Position",
+            "Industry",
+            "ICP Match",
+            "Use Case",
+            "LinkedIn Message",
+            "Connected On"
+          ],
+          "data_rows": 336,
+          "max_row": 338,
+          "max_column": 13,
+          "frozen_panes": null,
+          "filters": null,
+          "tables": [],
+          "columns": {
+            "Column 1": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "Column 2": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "First Name": {
+              "nonempty": 336,
+              "unique": 265,
+              "values_redacted": true
+            },
+            "Last Name": {
+              "nonempty": 336,
+              "unique": 326,
+              "values_redacted": true
+            },
+            "URL": {
+              "nonempty": 336,
+              "unique": 333,
+              "values_redacted": true
+            },
+            "Email Address": {
+              "nonempty": 7,
+              "unique": 7,
+              "values_redacted": true
+            },
+            "Company": {
+              "nonempty": 336,
+              "unique": 255,
+              "top_values": [
+                [
+                  "Accenture",
+                  49
+                ],
+                [
+                  "Deloitte",
+                  6
+                ],
+                [
+                  "Bank of America",
+                  4
+                ],
+                [
+                  "PwC",
+                  3
+                ],
+                [
+                  "Wells Fargo Advisors",
+                  3
+                ],
+                [
+                  "U.S. Bank",
+                  3
+                ],
+                [
+                  "EY",
+                  3
+                ],
+                [
+                  "Atlantis Capital, LLC",
+                  2
+                ],
+                [
+                  "7 Wolves Consulting, LLC.",
+                  2
+                ],
+                [
+                  "Extraordinary Capital",
+                  2
+                ],
+                [
+                  "KPMG",
+                  2
+                ],
+                [
+                  "Charles Schwab",
+                  2
+                ]
+              ]
+            },
+            "Position": {
+              "nonempty": 336,
+              "unique": 216,
+              "top_values": [
+                [
+                  "Managing Director",
+                  22
+                ],
+                [
+                  "Managing Partner",
+                  16
+                ],
+                [
+                  "Vice President",
+                  13
+                ],
+                [
+                  "Partner",
+                  12
+                ],
+                [
+                  "Financial Advisor",
+                  10
+                ],
+                [
+                  "Owner",
+                  6
+                ],
+                [
+                  "Principal",
+                  6
+                ],
+                [
+                  "Co-Founder",
+                  5
+                ],
+                [
+                  "Manager",
+                  5
+                ],
+                [
+                  "Founder",
+                  5
+                ],
+                [
+                  "CEO",
+                  5
+                ],
+                [
+                  "General Partner",
+                  4
+                ]
+              ]
+            },
+            "Industry": {
+              "nonempty": 336,
+              "unique": 5,
+              "top_values": [
+                [
+                  "Financial Services",
+                  170
+                ],
+                [
+                  "Consulting",
+                  130
+                ],
+                [
+                  "Manufacturing",
+                  17
+                ],
+                [
+                  "Private Equity",
+                  13
+                ],
+                [
+                  "Tax & Accounting",
+                  6
+                ]
+              ]
+            },
+            "ICP Match": {
+              "nonempty": 336,
+              "unique": 5,
+              "top_values": [
+                [
+                  "Financial Services",
+                  170
+                ],
+                [
+                  "Consulting Firms",
+                  130
+                ],
+                [
+                  "Manufacturing",
+                  17
+                ],
+                [
+                  "Private Equity",
+                  13
+                ],
+                [
+                  "Tax & Accounting",
+                  6
+                ]
+              ]
+            },
+            "Use Case": {
+              "nonempty": 336,
+              "unique": 5,
+              "top_values": [
+                [
+                  "SEC Filing Analysis",
+                  170
+                ],
+                [
+                  "Corporate Restructuring Analysis",
+                  130
+                ],
+                [
+                  "Manufacturing Site Analytics",
+                  17
+                ],
+                [
+                  "Portfolio Intelligence Automation",
+                  13
+                ],
+                [
+                  "Stock Transaction Forensics",
+                  6
+                ]
+              ]
+            },
+            "LinkedIn Message": {
+              "nonempty": 336,
+              "unique": 333,
+              "values_redacted": true
+            },
+            "Connected On": {
+              "nonempty": 336,
+              "unique": 279,
+              "top_values": [
+                [
+                  "2026-05-12 00:00:00",
+                  7
+                ],
+                [
+                  "2026-02-25 00:00:00",
+                  4
+                ],
+                [
+                  "2022-03-25 00:00:00",
+                  4
+                ],
+                [
+                  "2026-05-20 00:00:00",
+                  3
+                ],
+                [
+                  "2023-11-13 00:00:00",
+                  3
+                ],
+                [
+                  "2021-11-11 00:00:00",
+                  3
+                ],
+                [
+                  "2018-03-20 00:00:00",
+                  3
+                ],
+                [
+                  "2026-03-28 00:00:00",
+                  3
+                ],
+                [
+                  "2026-03-24 00:00:00",
+                  3
+                ],
+                [
+                  "2015-07-15 00:00:00",
+                  3
+                ],
+                [
+                  "2026-05-14 00:00:00",
+                  2
+                ],
+                [
+                  "2025-04-29 00:00:00",
+                  2
+                ]
+              ]
+            }
+          },
+          "fill_color_counts": [
+            [
+              "Values must be of type <class 'str'>",
+              3696
+            ]
+          ]
+        },
+        "Notes": {
+          "header_row": 4,
+          "headers": [
+            "",
+            "Classify contact's company to industry + Flagged contact deep dive (enrichment method)",
+            "4",
+            "Hard",
+            "Gave it context by having it review a table of the Fortune 1000 companies, identify patterns through names of the companies, etc.. Could not do brute force search on the rest of the companies with more generic names that weren't as straightforward. Left a lot of information untagged as an industry."
+          ],
+          "data_rows": 2,
+          "max_row": 22,
+          "max_column": 5,
+          "frozen_panes": null,
+          "filters": null,
+          "tables": [],
+          "columns": {
+            "Column 1": {
+              "nonempty": 0,
+              "unique": 0,
+              "top_values": []
+            },
+            "Classify contact's company to industry + Flagged contact deep dive (enrichment method)": {
+              "nonempty": 2,
+              "unique": 2,
+              "top_values": [
+                [
+                  "Decision Maker Filtering",
+                  1
+                ],
+                [
+                  "Crafting ICP Message Templates",
+                  1
+                ]
+              ]
+            },
+            "4": {
+              "nonempty": 2,
+              "unique": 2,
+              "top_values": [
+                [
+                  "2",
+                  1
+                ],
+                [
+                  "1",
+                  1
+                ]
+              ]
+            },
+            "Hard": {
+              "nonempty": 2,
+              "unique": 2,
+              "top_values": [
+                [
+                  "Medium",
+                  1
+                ],
+                [
+                  "Easy",
+                  1
+                ]
+              ]
+            },
+            "Gave it context by having it review a table of the Fortune 1000 companies, identify patterns through names of the companies, etc.. Could not do brute force search on the rest of the companies with more generic names that weren't as straightforward. Left a lot of information untagged as an industry.": {
+              "nonempty": 2,
+              "unique": 2,
+              "values_redacted": true
+            }
+          },
+          "fill_color_counts": []
+        }
+      }
+    }
+  }
+}

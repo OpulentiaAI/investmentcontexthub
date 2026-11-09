@@ -1,0 +1,7 @@
+#: A factual or analytic claim with epistemic provenance.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  claim: String
+  evidenceKind: [stated, observed, inferred, reported]
+  confidence?: [verified, reported, unverified]
+  groundedIn?: String

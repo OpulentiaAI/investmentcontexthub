@@ -1,0 +1,15 @@
+#: One buying signal actually observed against one org or person.
+#: Extends event: it happened on a date and had participants.
+extends: [event::au-base-types, wks.managed]
+fields:
+  #: Which signal class this instance belongs to.
+  signal: wks.signal*
+  #: The signal in the source's own words. Never paraphrased stronger.
+  quote: String
+  #: The citation. Required - no evidence, no observation.
+  evidence: wks.evidence&
+  #: Score from the signal's rank and recency.
+  score?: Number{>=0}
+  disposition: [kept, dropped, pending, contacted]
+  #: Required when disposition is dropped.
+  dropReason?: String

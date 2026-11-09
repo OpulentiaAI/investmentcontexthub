@@ -1,0 +1,5 @@
+.DS_Store
+node_modules/
+
+# transient holding pen for cofounder template repos being migrated in (their .git stays out).
+staging/

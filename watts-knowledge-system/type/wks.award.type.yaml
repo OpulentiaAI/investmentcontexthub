@@ -1,0 +1,19 @@
+#: A published award or list placement relevant to a person or company.
+#: Extends event: publication is a dated occurrence, not a permanent credential.
+extends: [event::au-base-types, wks.managed]
+fields:
+  #: Named recipient exactly as the publisher presents it.
+  honoree: wks.person* | wks.org*
+  #: Company associated with the published placement.
+  company: wks.org*
+  #: The publisher's list or award name, including its year when supplied.
+  listName: String
+  #: Organization that published the list.
+  publisher: String
+  #: Canonical publisher page, not a repost or press release.
+  publisherUrl: String
+  #: When this edition was published.
+  publicationDate: Date
+  #: yes marks pay-to-play, a rerun, or another disqualifying conflict.
+  conflict: [yes, no]
+

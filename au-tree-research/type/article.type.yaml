@@ -1,0 +1,18 @@
+#: A self-contained answer to one research question.
+#: Several articles may answer the same question, including independent comparisons.
+#: The research skill creates one answer by default and recovers saved work on retry.
+#: The saved article is a source artifact that downstream graphs can reference in place.
+#: Its body is the authored synthesis; source membership does not establish evidential strength.
+extends: source::au-base-types
+fields:
+  #: The researched question this article answers.
+  #: Saving a reference to an open question leaves a state-mismatch diagnostic.
+  #: Incoming answers edges on the question identify its articles.
+  #: This field places no limit on their number.
+  answers: question.researched*
+body:
+  - section: Overview
+    guidance: >-
+      State the answer and its scope.
+      Follow consumer writing guidance for presentation and additional sections.
+      Review the entire body for self-contained content and zero wikilinks, including code examples.

@@ -1,0 +1,11 @@
+# The agent/mcp framework bundle
+# A pure AGGREGATOR node (au.engine.repo).
+type: au.engine.repo::au-engine
+name: mcp-bundle
+description: aggregator for the agent/mcp framework type-def owners
+deps:
+  - name: au-mcp
+  - name: au-mcp-sdk
+  - name: au-mcp-core
+  - name: au-mcp-adapter-cc
+  - name: au-mcp-adapter-codex

@@ -1,0 +1,6 @@
+type: au.engine.workspace::au-engine
+edit:
+  - au-tree-research-template
+discover:
+  - mcp-bundle
+  - host-bundle

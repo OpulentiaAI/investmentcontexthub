@@ -1,0 +1,17 @@
+#: One public-safe source coverage claim. Its run proof is separately typed.
+extends: [thing::au-base-types, wks.managed]
+fields:
+  sourceId: String
+  kind: [mcp, native, composio, oauth, api, browser, cli, export, human, local-import]
+  reach: [readable, refreshable, discovered, captured-artifact, none]
+  authorization: [live, past-use, none]
+  state: [pending, extracting, extracted, unavailable, blocked]
+  lastObservedAt: Date
+  suppressionSurface: [yes, no]
+  covers: String
+  doesNotCover: String[+]
+  privacy: [private, public]
+  datasetOwner?: String
+  lastRun?: wks.extraction-run*
+  completeness?: [FULL, PARTIAL, ERROR, UNKNOWN]
+  blockerNote?: String

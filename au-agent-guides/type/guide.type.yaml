@@ -1,0 +1,23 @@
+#: Practical judgment about using Ars Umbris. A guide explains a useful decision,
+#: the situation it fits, and how to check the result. It may include the mechanics
+#: needed to understand that decision and links to their owning definitions.
+#:
+#: Concrete and open: a file can claim guide directly. Kind subtypes distinguish
+#: useful forms; consumer subtypes remain discoverable through this same closure.
+#: The serving tool selects file origins because a guide's instructions live in its file.
+#:
+#: Fields stay optional for the shared contract. This package's editorial standard
+#: asks for goal and rule. Schema evolution still needs checks against existing
+#: values and consumers, including previously unconstrained extra fields.
+fields:
+  #: The task or decision this guide answers, displayed in the index.
+  goal?: String
+  #: The actionable recommendation, displayed beside the goal.
+  rule?: String
+  #: A type or action the guide teaches. Actions represented by tool or intent
+  #: definitions use the same definition-reference slot.
+  about?: type*
+  #: Type definitions illustrating the advice. Body contributions need an example
+  #: anchor in frontmatter. Use ordinary body links for instances or other files.
+  #: A resolving example still needs review to establish what it demonstrates.
+  example?: type*[+]

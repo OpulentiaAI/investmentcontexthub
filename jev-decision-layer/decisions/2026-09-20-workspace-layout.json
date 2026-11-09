@@ -1,0 +1,57 @@
+{
+  "decision_id": "2026-09-20-workspace-layout",
+  "decided_at": "2026-09-20T03:45:00Z",
+  "decision_point": "D2_route",
+  "surface": "typesafe.evaluate",
+  "question_set": { "id": "workspace-layout", "version": "1" },
+  "state_ref": {
+    "kind": "inline_hash",
+    "filtered_fields": ["goal", "facts", "constraints"]
+  },
+  "answers": [
+    {
+      "question_id": "repo_layout",
+      "type": "choice",
+      "value": "separate_repos_woven",
+      "probabilities": {
+        "separate_repos_woven": 1.0,
+        "mirror_spine_in_context_repo": 0.0,
+        "monolith_reorganize": 0.0,
+        "not_determined": 0.0
+      },
+      "confidence": 0.99,
+      "gate_result": "passed",
+      "threshold": 0.85,
+      "direction": "at_least"
+    },
+    {
+      "question_id": "extend_axis",
+      "type": "choice",
+      "value": "source_capture",
+      "probabilities": {
+        "source_capture": 0.9,
+        "agent_platform_research": 0.1,
+        "decision_records": 0.0,
+        "not_determined": 0.0
+      },
+      "confidence": 0.86,
+      "gate_result": "passed",
+      "threshold": 0.85,
+      "direction": "at_least"
+    }
+  ],
+  "composition": {
+    "formula": "choice argmax with confidence floor 0.85 for structural actions",
+    "result": 1.0,
+    "final": 1.0,
+    "agreement_with_deterministic": "agree"
+  },
+  "routing": {
+    "outcome": "auto",
+    "action": "Mounted devinsystems + capysystems as sibling au repos with the corpus's live git repos untouched; personal-context holds the woven layer; custom types prioritize the source-capture axis (platform-export, conversation-export, research-capture, context-facet).",
+    "threshold_applied": 0.85,
+    "confidence_gate": 0.99,
+    "reason": "Both answers cleared the consequential-action floor; layout answer at p=1.0."
+  },
+  "usage": { "input_tokens": 957, "output_tokens": 124, "requests": 1 }
+}

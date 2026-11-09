@@ -1,0 +1,9 @@
+#: A deterministic or reviewed investment decision record.
+extends: [idea::au-base-types, wks.managed]
+fields:
+  mandate: String
+  decision: [paper, no-trade, watch, escalate, reject]
+  rationale: String
+  signalRefs?: String[]
+  costCeilingUsd?: Number{>=0}
+  evidence?: wks.evidence&[]
